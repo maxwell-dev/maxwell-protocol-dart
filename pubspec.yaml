@@ -1,0 +1,13 @@
+name: maxwell_protocol
+version: 0.1.0
+description: The maxwell protocol implementation for dart.
+homepage: https://github.com/maxwell-dev/maxwell-protocol-dart.git
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  protobuf: ^1.0.1
+
+dev_dependencies:
+  test: ^1.3.4
