@@ -35,6 +35,7 @@ def output(library_name, enum_pairs_dict):
         f"""import 'package:{library_name}/src/{library_name}.pb.dart';"""
     
     export_decls_output = \
+        f"""export 'package:protobuf/protobuf.dart';\n""" \
         f"""export 'package:{library_name}/src/{library_name}.pb.dart';"""
 
     function_defs = []

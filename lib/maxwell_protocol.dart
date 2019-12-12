@@ -2,6 +2,7 @@ import 'dart:typed_data';
 import 'package:protobuf/protobuf.dart';
 import 'package:maxwell_protocol/src/maxwell_protocol.pb.dart';
 
+export 'package:protobuf/protobuf.dart';
 export 'package:maxwell_protocol/src/maxwell_protocol.pb.dart';
 
 Uint8List encode_msg(GeneratedMessage msg) {
