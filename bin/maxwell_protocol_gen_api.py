@@ -76,6 +76,9 @@ def output(library_name, enum_pairs_dict):
                     f"""  int get_ref() {{\n"""
                     f"""    return this.traces[0].ref;\n"""
                     f"""  }}\n"""
+                    f"""  void set_ref(int ref) {{\n"""
+                    f"""    this.traces[0].ref = ref;\n"""
+                    f"""  }}\n"""
                     f"""}}"""
                 )
             else:
@@ -83,6 +86,9 @@ def output(library_name, enum_pairs_dict):
                     f"""extension ref_aware_on_{msg_type_name} on {msg_type_name} {{\n"""
                     f"""  int get_ref() {{\n"""
                     f"""    return this.ref;\n"""
+                    f"""  }}\n"""
+                    f"""  void set_ref(int ref) {{\n"""
+                    f"""    this.ref = ref;\n"""
                     f"""  }}\n"""
                     f"""}}"""
                 )
@@ -126,7 +132,6 @@ def output(library_name, enum_pairs_dict):
         f"""{extension_defs_output}"""
 
     output_file_name = f"""lib/{library_name}.dart"""
-    print(output_file_name)
     with open(output_file_name, "w") as output_file:
         output_file.write(output)
 

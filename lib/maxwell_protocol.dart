@@ -279,11 +279,17 @@ extension ref_aware_on_add_route_msg_t on add_route_msg_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_add_route_rep_t on add_route_rep_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -291,11 +297,17 @@ extension ref_aware_on_add_route_req_t on add_route_req_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_auth_rep_t on auth_rep_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -303,11 +315,17 @@ extension ref_aware_on_auth_req_t on auth_req_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_delete_route_msg_t on delete_route_msg_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -315,11 +333,17 @@ extension ref_aware_on_delete_route_rep_t on delete_route_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_delete_route_req_t on delete_route_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -327,11 +351,17 @@ extension ref_aware_on_delete_topics_rep_t on delete_topics_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_delete_topics_req_t on delete_topics_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -339,11 +369,17 @@ extension ref_aware_on_do2_rep_t on do2_rep_t {
   int get_ref() {
     return this.traces[0].ref;
   }
+  void set_ref(int ref) {
+    this.traces[0].ref = ref;
+  }
 }
 
 extension ref_aware_on_do2_req_t on do2_req_t {
   int get_ref() {
     return this.traces[0].ref;
+  }
+  void set_ref(int ref) {
+    this.traces[0].ref = ref;
   }
 }
 
@@ -351,11 +387,17 @@ extension ref_aware_on_do_rep_t on do_rep_t {
   int get_ref() {
     return this.traces[0].ref;
   }
+  void set_ref(int ref) {
+    this.traces[0].ref = ref;
+  }
 }
 
 extension ref_aware_on_do_req_t on do_req_t {
   int get_ref() {
     return this.traces[0].ref;
+  }
+  void set_ref(int ref) {
+    this.traces[0].ref = ref;
   }
 }
 
@@ -363,11 +405,17 @@ extension ref_aware_on_error2_rep_t on error2_rep_t {
   int get_ref() {
     return this.traces[0].ref;
   }
+  void set_ref(int ref) {
+    this.traces[0].ref = ref;
+  }
 }
 
 extension ref_aware_on_error_rep_t on error_rep_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -375,11 +423,17 @@ extension ref_aware_on_ok2_rep_t on ok2_rep_t {
   int get_ref() {
     return this.traces[0].ref;
   }
+  void set_ref(int ref) {
+    this.traces[0].ref = ref;
+  }
 }
 
 extension ref_aware_on_ok_rep_t on ok_rep_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -387,11 +441,17 @@ extension ref_aware_on_ping_rep_t on ping_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_ping_req_t on ping_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -399,11 +459,17 @@ extension ref_aware_on_pull_rep_t on pull_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_pull_req_t on pull_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -411,11 +477,17 @@ extension ref_aware_on_pull_routes_rep_t on pull_routes_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_pull_routes_req_t on pull_routes_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -423,11 +495,17 @@ extension ref_aware_on_push_rep_t on push_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_push_req_t on push_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -435,11 +513,17 @@ extension ref_aware_on_push_routes_rep_t on push_routes_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_push_routes_req_t on push_routes_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -447,11 +531,17 @@ extension ref_aware_on_register_backend_rep_t on register_backend_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_register_backend_req_t on register_backend_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -459,11 +549,17 @@ extension ref_aware_on_register_frontend_rep_t on register_frontend_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_register_frontend_req_t on register_frontend_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -471,11 +567,17 @@ extension ref_aware_on_resolve_backend_rep_t on resolve_backend_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_resolve_backend_req_t on resolve_backend_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -483,11 +585,17 @@ extension ref_aware_on_resolve_frontend_rep_t on resolve_frontend_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_resolve_frontend_req_t on resolve_frontend_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -495,11 +603,17 @@ extension ref_aware_on_resolve_ip_rep_t on resolve_ip_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_resolve_ip_req_t on resolve_ip_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -507,11 +621,17 @@ extension ref_aware_on_unwatch_rep_t on unwatch_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_unwatch_req_t on unwatch_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
 
@@ -519,10 +639,16 @@ extension ref_aware_on_watch_rep_t on watch_rep_t {
   int get_ref() {
     return this.ref;
   }
+  void set_ref(int ref) {
+    this.ref = ref;
+  }
 }
 
 extension ref_aware_on_watch_req_t on watch_req_t {
   int get_ref() {
     return this.ref;
+  }
+  void set_ref(int ref) {
+    this.ref = ref;
   }
 }
