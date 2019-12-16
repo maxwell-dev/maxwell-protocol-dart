@@ -50,12 +50,12 @@ void main() {
     trace.ref = 1;
     trace.handlerId = 2;
     trace.nodeId = Uint8List.fromList([1, 2, 3, 4]);
-    var doReq = do_req_t();
-    doReq.type = "get_candles";
-    doReq.value = "{}";
-    doReq.sourceEnabled = true;
-    doReq.source = source;
-    doReq.traces.add(trace);
+    GeneratedMessage doReq = do_req_t();
+    // doReq.type = "get_candles";
+    // doReq.value = "{}";
+    // doReq.sourceEnabled = true;
+    // doReq.source = source;
+    // doReq.traces.add(trace);
     expect(doReq.get_ref(), 1);
   });
 }

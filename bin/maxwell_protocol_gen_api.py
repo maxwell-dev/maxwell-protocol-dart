@@ -43,8 +43,12 @@ def output(library_name, enum_pairs_dict):
     for enum_type_name in enum_pairs_dict.keys():
         case_decls0 = []
         case_decls1 = []
-        case0 = "if"
+        case_decls2 = []
+        case_decls3 = []
+        case0 = "case"
         case1 = "case"
+        case2 = "case"
+        case3 = "case"
         is_first = True
         for (enum_name, enum_value) in enum_pairs_dict[enum_type_name]:
             if enum_name[0:7] == "UNKNOWN":
@@ -53,13 +57,16 @@ def output(library_name, enum_pairs_dict):
             if is_first:
                 is_first = False
             else:
-                case0 = "else if"
+                case0 = "case"
                 case1 = "case"
+                case2 = "case"
+                case3 = "case"
 
             msg_type_name = f"""{str.lower(enum_name)}_t"""
             case_decls0.append(
-                f"""  {case0} (msg is {msg_type_name}) {{\n"""
+                f"""  {case0} {msg_type_name}: {{\n"""
                 f"""    encodedMsgType[0] = {enum_value};\n"""
+                f"""    break;\n"""
                 f"""  }}"""
             )
             case_decls1.append(
@@ -67,34 +74,40 @@ def output(library_name, enum_pairs_dict):
                 f"""    return {msg_type_name}()..mergeFromBuffer(encodedMsgBody);\n"""
                 f"""  }}"""
             )
-
             if msg_type_name == "do_req_t" or msg_type_name == "do_rep_t" \
                 or msg_type_name == "do2_req_t" or msg_type_name == "do2_rep_t" \
                     or msg_type_name == "ok2_rep_t" or msg_type_name == "error2_rep_t":
-                extension_defs.append(
-                    f"""extension ref_aware_on_{msg_type_name} on {msg_type_name} {{\n"""
-                    f"""  int get_ref() {{\n"""
-                    f"""    return this.traces[0].ref;\n"""
-                    f"""  }}\n"""
-                    f"""  void set_ref(int ref) {{\n"""
-                    f"""    this.traces[0].ref = ref;\n"""
-                    f"""  }}\n"""
-                    f"""}}"""
+                case_decls2.append(
+                    f"""    {case2} {msg_type_name}: {{\n"""
+                    f"""      return (this as {msg_type_name}).traces[0].ref;\n"""
+                    f"""    }}"""
                 )
             else:
-                extension_defs.append(
-                    f"""extension ref_aware_on_{msg_type_name} on {msg_type_name} {{\n"""
-                    f"""  int get_ref() {{\n"""
-                    f"""    return this.ref;\n"""
-                    f"""  }}\n"""
-                    f"""  void set_ref(int ref) {{\n"""
-                    f"""    this.ref = ref;\n"""
-                    f"""  }}\n"""
-                    f"""}}"""
+                case_decls2.append(
+                    f"""    {case2} {msg_type_name}: {{\n"""
+                    f"""      return (this as {msg_type_name}).ref;\n"""
+                    f"""    }}"""
                 )
-
+            if msg_type_name == "do_req_t" or msg_type_name == "do_rep_t" \
+                        or msg_type_name == "do2_req_t" or msg_type_name == "do2_rep_t" \
+                        or msg_type_name == "ok2_rep_t" or msg_type_name == "error2_rep_t":
+                case_decls3.append(
+                    f"""    {case2} {msg_type_name}: {{\n"""
+                    f"""      (this as {msg_type_name}).traces[0].ref = ref;\n"""
+                    f"""      break;\n"""
+                    f"""    }}"""
+                )
+            else:
+                case_decls3.append(
+                    f"""    {case2} {msg_type_name}: {{\n"""
+                    f"""      (this as {msg_type_name}).ref = ref;\n"""
+                    f"""      break;\n"""
+                    f"""    }}"""
+                )
         case_decls_output0 = "\n".join(case_decls0)
         case_decls_output1 = "\n".join(case_decls1)
+        case_decls_output2 = "\n".join(case_decls2)
+        case_decls_output3 = "\n".join(case_decls3)
 
         enum_type_prefix = re.sub(r"([^.]+)_type_t", r"\1", enum_type_name)
         function_name0 = f"""encode_{enum_type_prefix}"""
@@ -102,10 +115,11 @@ def output(library_name, enum_pairs_dict):
             f"""Uint8List {function_name0}(GeneratedMessage msg) {{\n"""
             f"""  var encodedMsgType = Uint8List(1);\n"""
             f"""  var encodedMsgBody = msg.writeToBuffer();\n"""
+            f"""  switch(msg.runtimeType) {{\n"""
             f"""{case_decls_output0}\n"""
-            f"""  else {{\n"""
+            f"""  default: {{\n"""
             f"""    throw 'Unknown msg type: ${{msg.runtimeType}}';\n"""
-            f"""  }}\n"""
+            f"""  }}}}\n"""
             f"""  return Uint8List.fromList(encodedMsgType + encodedMsgBody);\n"""
             f"""}}"""
         )
@@ -123,7 +137,24 @@ def output(library_name, enum_pairs_dict):
         )
 
     function_defs_output = "\n\n".join(function_defs)
-    extension_defs_output = "\n\n".join(extension_defs)
+
+    extension_defs_output = \
+        f"""extension ref_aware on GeneratedMessage {{\n""" \
+        f"""  int get_ref() {{\n""" \
+        f"""    switch(this.runtimeType) {{\n""" \
+        f"""{case_decls_output2}\n""" \
+        f"""    default: {{\n""" \
+        f"""      throw 'Unknown msg type: ${{this.runtimeType}}';\n""" \
+        f"""    }}}}\n""" \
+        f"""  }}\n\n""" \
+        f"""  void set_ref(int ref) {{\n""" \
+        f"""    switch(this.runtimeType) {{\n""" \
+        f"""  {case_decls_output3}\n""" \
+        f"""    default: {{\n""" \
+        f"""      throw 'Unknown msg type: ${{this.runtimeType}}';\n""" \
+        f"""    }}}}\n""" \
+        f"""  }}\n""" \
+        f"""}}"""
 
     output = \
         f"""{import_decls_output}\n\n""" \
