@@ -39,6 +39,7 @@ def output(library_name, enum_pairs_dict):
         f"""export 'package:{library_name}/src/{library_name}.pb.dart';"""
 
     function_defs = []
+    extension_defs = []
     for enum_type_name in enum_pairs_dict.keys():
         case_decls0 = []
         case_decls1 = []
@@ -57,15 +58,35 @@ def output(library_name, enum_pairs_dict):
 
             msg_type_name = f"""{str.lower(enum_name)}_t"""
             case_decls0.append(
-                f"""    {case0} (msg is {msg_type_name}) {{\n"""
-                f"""        encodedMsgType[0] = {enum_value};\n"""
-                f"""    }}"""
+                f"""  {case0} (msg is {msg_type_name}) {{\n"""
+                f"""    encodedMsgType[0] = {enum_value};\n"""
+                f"""  }}"""
             )
             case_decls1.append(
-                f"""    {case1} {enum_value}: {{\n"""
-                f"""        return {msg_type_name}()..mergeFromBuffer(encodedMsgBody);\n"""
-                f"""    }}"""
+                f"""  {case1} {enum_value}: {{\n"""
+                f"""    return {msg_type_name}()..mergeFromBuffer(encodedMsgBody);\n"""
+                f"""  }}"""
             )
+
+            if msg_type_name == "do_req_t" or msg_type_name == "do_rep_t" \
+                or msg_type_name == "do2_req_t" or msg_type_name == "do2_rep_t" \
+                    or msg_type_name == "ok2_rep_t" or msg_type_name == "error2_rep_t":
+                extension_defs.append(
+                    f"""extension ref_aware_on_{msg_type_name} on {msg_type_name} {{\n"""
+                    f"""  int get_ref() {{\n"""
+                    f"""    return this.traces[0].ref;\n"""
+                    f"""  }}\n"""
+                    f"""}}"""
+                )
+            else:
+                extension_defs.append(
+                    f"""extension ref_aware_on_{msg_type_name} on {msg_type_name} {{\n"""
+                    f"""  int get_ref() {{\n"""
+                    f"""    return this.ref;\n"""
+                    f"""  }}\n"""
+                    f"""}}"""
+                )
+
         case_decls_output0 = "\n".join(case_decls0)
         case_decls_output1 = "\n".join(case_decls1)
 
@@ -73,33 +94,36 @@ def output(library_name, enum_pairs_dict):
         function_name0 = f"""encode_{enum_type_prefix}"""
         function_defs.append(
             f"""Uint8List {function_name0}(GeneratedMessage msg) {{\n"""
-            f"""    var encodedMsgType = Uint8List(1);\n"""
-            f"""    var encodedMsgBody = msg.writeToBuffer();\n"""
+            f"""  var encodedMsgType = Uint8List(1);\n"""
+            f"""  var encodedMsgBody = msg.writeToBuffer();\n"""
             f"""{case_decls_output0}\n"""
-            f"""    else {{\n"""
-            f"""      throw 'Unknown msg type: ${{msg.runtimeType}}';\n"""
-            f"""    }}\n"""
-            f"""    return Uint8List.fromList(encodedMsgType + encodedMsgBody);\n"""
+            f"""  else {{\n"""
+            f"""    throw 'Unknown msg type: ${{msg.runtimeType}}';\n"""
+            f"""  }}\n"""
+            f"""  return Uint8List.fromList(encodedMsgType + encodedMsgBody);\n"""
             f"""}}"""
         )
         function_name1 = f"""decode_{enum_type_prefix}"""
         function_defs.append(
             f"""GeneratedMessage {function_name1}(Uint8List encodedMsg) {{\n"""
-            f"""    var msgType = encodedMsg[0];\n"""
-            f"""    var encodedMsgBody = encodedMsg.sublist(1);\n"""
-            f"""    switch(msgType) {{\n"""
+            f"""  var msgType = encodedMsg[0];\n"""
+            f"""  var encodedMsgBody = encodedMsg.sublist(1);\n"""
+            f"""  switch(msgType) {{\n"""
             f"""{case_decls_output1}\n"""
-            f"""    default: {{\n"""
-            f"""      throw 'Unknown msg type: ${{msgType}}';\n"""
-            f"""    }}}}\n"""
+            f"""  default: {{\n"""
+            f"""    throw 'Unknown msg type: ${{msgType}}';\n"""
+            f"""  }}}}\n"""
             f"""}}"""
         )
+
     function_defs_output = "\n\n".join(function_defs)
+    extension_defs_output = "\n\n".join(extension_defs)
 
     output = \
         f"""{import_decls_output}\n\n""" \
         f"""{export_decls_output}\n\n""" \
-        f"""{function_defs_output}"""
+        f"""{function_defs_output}\n\n""" \
+        f"""{extension_defs_output}"""
 
     output_file_name = f"""lib/{library_name}.dart"""
     print(output_file_name)
