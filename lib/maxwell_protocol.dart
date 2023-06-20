@@ -9,16 +9,20 @@ Uint8List encode_msg(GeneratedMessage msg) {
   var encodedMsgType = Uint8List(1);
   var encodedMsgBody = msg.writeToBuffer();
   switch(msg.runtimeType) {
-  case add_route_msg_t: {
-    encodedMsgType[0] = 71;
+  case add_routes_rep_t: {
+    encodedMsgType[0] = 92;
     break;
   }
-  case add_route_rep_t: {
-    encodedMsgType[0] = 68;
+  case add_routes_req_t: {
+    encodedMsgType[0] = 91;
     break;
   }
-  case add_route_req_t: {
-    encodedMsgType[0] = 67;
+  case assign_frontend_rep_t: {
+    encodedMsgType[0] = 112;
+    break;
+  }
+  case assign_frontend_req_t: {
+    encodedMsgType[0] = 111;
     break;
   }
   case auth_rep_t: {
@@ -29,48 +33,28 @@ Uint8List encode_msg(GeneratedMessage msg) {
     encodedMsgType[0] = 27;
     break;
   }
-  case delete_route_msg_t: {
-    encodedMsgType[0] = 72;
-    break;
-  }
-  case delete_route_rep_t: {
-    encodedMsgType[0] = 70;
-    break;
-  }
-  case delete_route_req_t: {
-    encodedMsgType[0] = 69;
-    break;
-  }
-  case delete_topics_rep_t: {
-    encodedMsgType[0] = 84;
-    break;
-  }
-  case delete_topics_req_t: {
-    encodedMsgType[0] = 83;
-    break;
-  }
-  case do2_rep_t: {
-    encodedMsgType[0] = 10;
-    break;
-  }
-  case do2_req_t: {
-    encodedMsgType[0] = 9;
-    break;
-  }
-  case do_rep_t: {
-    encodedMsgType[0] = 8;
-    break;
-  }
-  case do_req_t: {
-    encodedMsgType[0] = 7;
-    break;
-  }
   case error2_rep_t: {
     encodedMsgType[0] = 32;
     break;
   }
   case error_rep_t: {
     encodedMsgType[0] = 30;
+    break;
+  }
+  case get_routes_rep_t: {
+    encodedMsgType[0] = 96;
+    break;
+  }
+  case get_routes_req_t: {
+    encodedMsgType[0] = 95;
+    break;
+  }
+  case locate_topic_rep_t: {
+    encodedMsgType[0] = 114;
+    break;
+  }
+  case locate_topic_req_t: {
+    encodedMsgType[0] = 113;
     break;
   }
   case ok2_rep_t: {
@@ -90,43 +74,27 @@ Uint8List encode_msg(GeneratedMessage msg) {
     break;
   }
   case pull_rep_t: {
-    encodedMsgType[0] = 4;
-    break;
-  }
-  case pull_req_t: {
-    encodedMsgType[0] = 3;
-    break;
-  }
-  case pull_routes_rep_t: {
-    encodedMsgType[0] = 76;
-    break;
-  }
-  case pull_routes_req_t: {
-    encodedMsgType[0] = 75;
-    break;
-  }
-  case push_rep_t: {
     encodedMsgType[0] = 6;
     break;
   }
-  case push_req_t: {
+  case pull_req_t: {
     encodedMsgType[0] = 5;
     break;
   }
-  case push_routes_rep_t: {
-    encodedMsgType[0] = 74;
+  case push_rep_t: {
+    encodedMsgType[0] = 4;
     break;
   }
-  case push_routes_req_t: {
-    encodedMsgType[0] = 73;
+  case push_req_t: {
+    encodedMsgType[0] = 3;
     break;
   }
   case register_backend_rep_t: {
-    encodedMsgType[0] = 82;
+    encodedMsgType[0] = 68;
     break;
   }
   case register_backend_req_t: {
-    encodedMsgType[0] = 81;
+    encodedMsgType[0] = 67;
     break;
   }
   case register_frontend_rep_t: {
@@ -137,20 +105,20 @@ Uint8List encode_msg(GeneratedMessage msg) {
     encodedMsgType[0] = 65;
     break;
   }
-  case resolve_backend_rep_t: {
-    encodedMsgType[0] = 100;
+  case register_server_rep_t: {
+    encodedMsgType[0] = 70;
     break;
   }
-  case resolve_backend_req_t: {
-    encodedMsgType[0] = 99;
+  case register_server_req_t: {
+    encodedMsgType[0] = 69;
     break;
   }
-  case resolve_frontend_rep_t: {
-    encodedMsgType[0] = 98;
+  case req_rep_t: {
+    encodedMsgType[0] = 8;
     break;
   }
-  case resolve_frontend_req_t: {
-    encodedMsgType[0] = 97;
+  case req_req_t: {
+    encodedMsgType[0] = 7;
     break;
   }
   case resolve_ip_rep_t: {
@@ -161,20 +129,16 @@ Uint8List encode_msg(GeneratedMessage msg) {
     encodedMsgType[0] = 121;
     break;
   }
-  case unwatch_rep_t: {
-    encodedMsgType[0] = 108;
+  case route_added_msg_t: {
+    encodedMsgType[0] = 100;
     break;
   }
-  case unwatch_req_t: {
-    encodedMsgType[0] = 107;
+  case route_deleted_msg_t: {
+    encodedMsgType[0] = 101;
     break;
   }
-  case watch_rep_t: {
-    encodedMsgType[0] = 106;
-    break;
-  }
-  case watch_req_t: {
-    encodedMsgType[0] = 105;
+  case route_health_changed_msg_t: {
+    encodedMsgType[0] = 102;
     break;
   }
   default: {
@@ -187,14 +151,17 @@ GeneratedMessage decode_msg(Uint8List encodedMsg) {
   var msgType = encodedMsg[0];
   var encodedMsgBody = encodedMsg.sublist(1);
   switch(msgType) {
-  case 71: {
-    return add_route_msg_t()..mergeFromBuffer(encodedMsgBody);
+  case 92: {
+    return add_routes_rep_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 68: {
-    return add_route_rep_t()..mergeFromBuffer(encodedMsgBody);
+  case 91: {
+    return add_routes_req_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 67: {
-    return add_route_req_t()..mergeFromBuffer(encodedMsgBody);
+  case 112: {
+    return assign_frontend_rep_t()..mergeFromBuffer(encodedMsgBody);
+  }
+  case 111: {
+    return assign_frontend_req_t()..mergeFromBuffer(encodedMsgBody);
   }
   case 28: {
     return auth_rep_t()..mergeFromBuffer(encodedMsgBody);
@@ -202,38 +169,23 @@ GeneratedMessage decode_msg(Uint8List encodedMsg) {
   case 27: {
     return auth_req_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 72: {
-    return delete_route_msg_t()..mergeFromBuffer(encodedMsgBody);
-  }
-  case 70: {
-    return delete_route_rep_t()..mergeFromBuffer(encodedMsgBody);
-  }
-  case 69: {
-    return delete_route_req_t()..mergeFromBuffer(encodedMsgBody);
-  }
-  case 84: {
-    return delete_topics_rep_t()..mergeFromBuffer(encodedMsgBody);
-  }
-  case 83: {
-    return delete_topics_req_t()..mergeFromBuffer(encodedMsgBody);
-  }
-  case 10: {
-    return do2_rep_t()..mergeFromBuffer(encodedMsgBody);
-  }
-  case 9: {
-    return do2_req_t()..mergeFromBuffer(encodedMsgBody);
-  }
-  case 8: {
-    return do_rep_t()..mergeFromBuffer(encodedMsgBody);
-  }
-  case 7: {
-    return do_req_t()..mergeFromBuffer(encodedMsgBody);
-  }
   case 32: {
     return error2_rep_t()..mergeFromBuffer(encodedMsgBody);
   }
   case 30: {
     return error_rep_t()..mergeFromBuffer(encodedMsgBody);
+  }
+  case 96: {
+    return get_routes_rep_t()..mergeFromBuffer(encodedMsgBody);
+  }
+  case 95: {
+    return get_routes_req_t()..mergeFromBuffer(encodedMsgBody);
+  }
+  case 114: {
+    return locate_topic_rep_t()..mergeFromBuffer(encodedMsgBody);
+  }
+  case 113: {
+    return locate_topic_req_t()..mergeFromBuffer(encodedMsgBody);
   }
   case 31: {
     return ok2_rep_t()..mergeFromBuffer(encodedMsgBody);
@@ -247,34 +199,22 @@ GeneratedMessage decode_msg(Uint8List encodedMsg) {
   case 1: {
     return ping_req_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 4: {
+  case 6: {
     return pull_rep_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 3: {
+  case 5: {
     return pull_req_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 76: {
-    return pull_routes_rep_t()..mergeFromBuffer(encodedMsgBody);
-  }
-  case 75: {
-    return pull_routes_req_t()..mergeFromBuffer(encodedMsgBody);
-  }
-  case 6: {
+  case 4: {
     return push_rep_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 5: {
+  case 3: {
     return push_req_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 74: {
-    return push_routes_rep_t()..mergeFromBuffer(encodedMsgBody);
-  }
-  case 73: {
-    return push_routes_req_t()..mergeFromBuffer(encodedMsgBody);
-  }
-  case 82: {
+  case 68: {
     return register_backend_rep_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 81: {
+  case 67: {
     return register_backend_req_t()..mergeFromBuffer(encodedMsgBody);
   }
   case 66: {
@@ -283,17 +223,17 @@ GeneratedMessage decode_msg(Uint8List encodedMsg) {
   case 65: {
     return register_frontend_req_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 100: {
-    return resolve_backend_rep_t()..mergeFromBuffer(encodedMsgBody);
+  case 70: {
+    return register_server_rep_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 99: {
-    return resolve_backend_req_t()..mergeFromBuffer(encodedMsgBody);
+  case 69: {
+    return register_server_req_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 98: {
-    return resolve_frontend_rep_t()..mergeFromBuffer(encodedMsgBody);
+  case 8: {
+    return req_rep_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 97: {
-    return resolve_frontend_req_t()..mergeFromBuffer(encodedMsgBody);
+  case 7: {
+    return req_req_t()..mergeFromBuffer(encodedMsgBody);
   }
   case 122: {
     return resolve_ip_rep_t()..mergeFromBuffer(encodedMsgBody);
@@ -301,17 +241,14 @@ GeneratedMessage decode_msg(Uint8List encodedMsg) {
   case 121: {
     return resolve_ip_req_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 108: {
-    return unwatch_rep_t()..mergeFromBuffer(encodedMsgBody);
+  case 100: {
+    return route_added_msg_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 107: {
-    return unwatch_req_t()..mergeFromBuffer(encodedMsgBody);
+  case 101: {
+    return route_deleted_msg_t()..mergeFromBuffer(encodedMsgBody);
   }
-  case 106: {
-    return watch_rep_t()..mergeFromBuffer(encodedMsgBody);
-  }
-  case 105: {
-    return watch_req_t()..mergeFromBuffer(encodedMsgBody);
+  case 102: {
+    return route_health_changed_msg_t()..mergeFromBuffer(encodedMsgBody);
   }
   default: {
     throw 'Unknown msg type: ${msgType}';
@@ -321,14 +258,17 @@ GeneratedMessage decode_msg(Uint8List encodedMsg) {
 extension ref_aware on GeneratedMessage {
   int get_ref() {
     switch(this.runtimeType) {
-    case add_route_msg_t: {
-      return (this as add_route_msg_t).ref;
+    case add_routes_rep_t: {
+      return (this as add_routes_rep_t).ref;
     }
-    case add_route_rep_t: {
-      return (this as add_route_rep_t).ref;
+    case add_routes_req_t: {
+      return (this as add_routes_req_t).ref;
     }
-    case add_route_req_t: {
-      return (this as add_route_req_t).ref;
+    case assign_frontend_rep_t: {
+      return (this as assign_frontend_rep_t).ref;
+    }
+    case assign_frontend_req_t: {
+      return (this as assign_frontend_req_t).ref;
     }
     case auth_rep_t: {
       return (this as auth_rep_t).ref;
@@ -336,41 +276,26 @@ extension ref_aware on GeneratedMessage {
     case auth_req_t: {
       return (this as auth_req_t).ref;
     }
-    case delete_route_msg_t: {
-      return (this as delete_route_msg_t).ref;
-    }
-    case delete_route_rep_t: {
-      return (this as delete_route_rep_t).ref;
-    }
-    case delete_route_req_t: {
-      return (this as delete_route_req_t).ref;
-    }
-    case delete_topics_rep_t: {
-      return (this as delete_topics_rep_t).ref;
-    }
-    case delete_topics_req_t: {
-      return (this as delete_topics_req_t).ref;
-    }
-    case do2_rep_t: {
-      return (this as do2_rep_t).traces[0].ref;
-    }
-    case do2_req_t: {
-      return (this as do2_req_t).traces[0].ref;
-    }
-    case do_rep_t: {
-      return (this as do_rep_t).traces[0].ref;
-    }
-    case do_req_t: {
-      return (this as do_req_t).traces[0].ref;
-    }
     case error2_rep_t: {
-      return (this as error2_rep_t).traces[0].ref;
+      return (this as error2_rep_t).ref;
     }
     case error_rep_t: {
       return (this as error_rep_t).ref;
     }
+    case get_routes_rep_t: {
+      return (this as get_routes_rep_t).ref;
+    }
+    case get_routes_req_t: {
+      return (this as get_routes_req_t).ref;
+    }
+    case locate_topic_rep_t: {
+      return (this as locate_topic_rep_t).ref;
+    }
+    case locate_topic_req_t: {
+      return (this as locate_topic_req_t).ref;
+    }
     case ok2_rep_t: {
-      return (this as ok2_rep_t).traces[0].ref;
+      return (this as ok2_rep_t).ref;
     }
     case ok_rep_t: {
       return (this as ok_rep_t).ref;
@@ -387,23 +312,11 @@ extension ref_aware on GeneratedMessage {
     case pull_req_t: {
       return (this as pull_req_t).ref;
     }
-    case pull_routes_rep_t: {
-      return (this as pull_routes_rep_t).ref;
-    }
-    case pull_routes_req_t: {
-      return (this as pull_routes_req_t).ref;
-    }
     case push_rep_t: {
       return (this as push_rep_t).ref;
     }
     case push_req_t: {
       return (this as push_req_t).ref;
-    }
-    case push_routes_rep_t: {
-      return (this as push_routes_rep_t).ref;
-    }
-    case push_routes_req_t: {
-      return (this as push_routes_req_t).ref;
     }
     case register_backend_rep_t: {
       return (this as register_backend_rep_t).ref;
@@ -417,17 +330,17 @@ extension ref_aware on GeneratedMessage {
     case register_frontend_req_t: {
       return (this as register_frontend_req_t).ref;
     }
-    case resolve_backend_rep_t: {
-      return (this as resolve_backend_rep_t).ref;
+    case register_server_rep_t: {
+      return (this as register_server_rep_t).ref;
     }
-    case resolve_backend_req_t: {
-      return (this as resolve_backend_req_t).ref;
+    case register_server_req_t: {
+      return (this as register_server_req_t).ref;
     }
-    case resolve_frontend_rep_t: {
-      return (this as resolve_frontend_rep_t).ref;
+    case req_rep_t: {
+      return (this as req_rep_t).ref;
     }
-    case resolve_frontend_req_t: {
-      return (this as resolve_frontend_req_t).ref;
+    case req_req_t: {
+      return (this as req_req_t).ref;
     }
     case resolve_ip_rep_t: {
       return (this as resolve_ip_rep_t).ref;
@@ -435,17 +348,14 @@ extension ref_aware on GeneratedMessage {
     case resolve_ip_req_t: {
       return (this as resolve_ip_req_t).ref;
     }
-    case unwatch_rep_t: {
-      return (this as unwatch_rep_t).ref;
+    case route_added_msg_t: {
+      return (this as route_added_msg_t).ref;
     }
-    case unwatch_req_t: {
-      return (this as unwatch_req_t).ref;
+    case route_deleted_msg_t: {
+      return (this as route_deleted_msg_t).ref;
     }
-    case watch_rep_t: {
-      return (this as watch_rep_t).ref;
-    }
-    case watch_req_t: {
-      return (this as watch_req_t).ref;
+    case route_health_changed_msg_t: {
+      return (this as route_health_changed_msg_t).ref;
     }
     default: {
       throw 'Unknown msg type: ${this.runtimeType}';
@@ -454,16 +364,20 @@ extension ref_aware on GeneratedMessage {
 
   void set_ref(int ref) {
     switch(this.runtimeType) {
-      case add_route_msg_t: {
-      (this as add_route_msg_t).ref = ref;
+      case add_routes_rep_t: {
+      (this as add_routes_rep_t).ref = ref;
       break;
     }
-    case add_route_rep_t: {
-      (this as add_route_rep_t).ref = ref;
+    case add_routes_req_t: {
+      (this as add_routes_req_t).ref = ref;
       break;
     }
-    case add_route_req_t: {
-      (this as add_route_req_t).ref = ref;
+    case assign_frontend_rep_t: {
+      (this as assign_frontend_rep_t).ref = ref;
+      break;
+    }
+    case assign_frontend_req_t: {
+      (this as assign_frontend_req_t).ref = ref;
       break;
     }
     case auth_rep_t: {
@@ -474,52 +388,32 @@ extension ref_aware on GeneratedMessage {
       (this as auth_req_t).ref = ref;
       break;
     }
-    case delete_route_msg_t: {
-      (this as delete_route_msg_t).ref = ref;
-      break;
-    }
-    case delete_route_rep_t: {
-      (this as delete_route_rep_t).ref = ref;
-      break;
-    }
-    case delete_route_req_t: {
-      (this as delete_route_req_t).ref = ref;
-      break;
-    }
-    case delete_topics_rep_t: {
-      (this as delete_topics_rep_t).ref = ref;
-      break;
-    }
-    case delete_topics_req_t: {
-      (this as delete_topics_req_t).ref = ref;
-      break;
-    }
-    case do2_rep_t: {
-      (this as do2_rep_t).traces[0].ref = ref;
-      break;
-    }
-    case do2_req_t: {
-      (this as do2_req_t).traces[0].ref = ref;
-      break;
-    }
-    case do_rep_t: {
-      (this as do_rep_t).traces[0].ref = ref;
-      break;
-    }
-    case do_req_t: {
-      (this as do_req_t).traces[0].ref = ref;
-      break;
-    }
     case error2_rep_t: {
-      (this as error2_rep_t).traces[0].ref = ref;
+      (this as error2_rep_t).ref = ref;
       break;
     }
     case error_rep_t: {
       (this as error_rep_t).ref = ref;
       break;
     }
+    case get_routes_rep_t: {
+      (this as get_routes_rep_t).ref = ref;
+      break;
+    }
+    case get_routes_req_t: {
+      (this as get_routes_req_t).ref = ref;
+      break;
+    }
+    case locate_topic_rep_t: {
+      (this as locate_topic_rep_t).ref = ref;
+      break;
+    }
+    case locate_topic_req_t: {
+      (this as locate_topic_req_t).ref = ref;
+      break;
+    }
     case ok2_rep_t: {
-      (this as ok2_rep_t).traces[0].ref = ref;
+      (this as ok2_rep_t).ref = ref;
       break;
     }
     case ok_rep_t: {
@@ -542,28 +436,12 @@ extension ref_aware on GeneratedMessage {
       (this as pull_req_t).ref = ref;
       break;
     }
-    case pull_routes_rep_t: {
-      (this as pull_routes_rep_t).ref = ref;
-      break;
-    }
-    case pull_routes_req_t: {
-      (this as pull_routes_req_t).ref = ref;
-      break;
-    }
     case push_rep_t: {
       (this as push_rep_t).ref = ref;
       break;
     }
     case push_req_t: {
       (this as push_req_t).ref = ref;
-      break;
-    }
-    case push_routes_rep_t: {
-      (this as push_routes_rep_t).ref = ref;
-      break;
-    }
-    case push_routes_req_t: {
-      (this as push_routes_req_t).ref = ref;
       break;
     }
     case register_backend_rep_t: {
@@ -582,20 +460,20 @@ extension ref_aware on GeneratedMessage {
       (this as register_frontend_req_t).ref = ref;
       break;
     }
-    case resolve_backend_rep_t: {
-      (this as resolve_backend_rep_t).ref = ref;
+    case register_server_rep_t: {
+      (this as register_server_rep_t).ref = ref;
       break;
     }
-    case resolve_backend_req_t: {
-      (this as resolve_backend_req_t).ref = ref;
+    case register_server_req_t: {
+      (this as register_server_req_t).ref = ref;
       break;
     }
-    case resolve_frontend_rep_t: {
-      (this as resolve_frontend_rep_t).ref = ref;
+    case req_rep_t: {
+      (this as req_rep_t).ref = ref;
       break;
     }
-    case resolve_frontend_req_t: {
-      (this as resolve_frontend_req_t).ref = ref;
+    case req_req_t: {
+      (this as req_req_t).ref = ref;
       break;
     }
     case resolve_ip_rep_t: {
@@ -606,20 +484,16 @@ extension ref_aware on GeneratedMessage {
       (this as resolve_ip_req_t).ref = ref;
       break;
     }
-    case unwatch_rep_t: {
-      (this as unwatch_rep_t).ref = ref;
+    case route_added_msg_t: {
+      (this as route_added_msg_t).ref = ref;
       break;
     }
-    case unwatch_req_t: {
-      (this as unwatch_req_t).ref = ref;
+    case route_deleted_msg_t: {
+      (this as route_deleted_msg_t).ref = ref;
       break;
     }
-    case watch_rep_t: {
-      (this as watch_rep_t).ref = ref;
-      break;
-    }
-    case watch_req_t: {
-      (this as watch_req_t).ref = ref;
+    case route_health_changed_msg_t: {
+      (this as route_health_changed_msg_t).ref = ref;
       break;
     }
     default: {

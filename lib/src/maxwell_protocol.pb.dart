@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: maxwell_protocol.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -13,23 +17,16 @@ import 'package:protobuf/protobuf.dart' as $pb;
 export 'maxwell_protocol.pbenum.dart';
 
 class ping_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ping_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+  factory ping_req_t() => create();
+  ping_req_t._() : super();
+  factory ping_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ping_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ping_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  ping_req_t._() : super();
-  factory ping_req_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory ping_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ping_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -39,8 +36,10 @@ class ping_req_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ping_req_t copyWith(void Function(ping_req_t) updates) => super.copyWith((message) => updates(message as ping_req_t)) as ping_req_t; // ignore: deprecated_member_use
+  ping_req_t copyWith(void Function(ping_req_t) updates) => super.copyWith((message) => updates(message as ping_req_t)) as ping_req_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ping_req_t create() => ping_req_t._();
   ping_req_t createEmptyInstance() => create();
@@ -60,23 +59,16 @@ class ping_req_t extends $pb.GeneratedMessage {
 }
 
 class ping_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ping_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+  factory ping_rep_t() => create();
+  ping_rep_t._() : super();
+  factory ping_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ping_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ping_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  ping_rep_t._() : super();
-  factory ping_rep_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory ping_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ping_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -86,8 +78,10 @@ class ping_rep_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ping_rep_t copyWith(void Function(ping_rep_t) updates) => super.copyWith((message) => updates(message as ping_rep_t)) as ping_rep_t; // ignore: deprecated_member_use
+  ping_rep_t copyWith(void Function(ping_rep_t) updates) => super.copyWith((message) => updates(message as ping_rep_t)) as ping_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ping_rep_t create() => ping_rep_t._();
   ping_rep_t createEmptyInstance() => create();
@@ -106,192 +100,19 @@ class ping_rep_t extends $pb.GeneratedMessage {
   void clearRef() => clearField(15);
 }
 
-class pull_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pull_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'topic')
-    ..aInt64(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'offset')
-    ..a<$core.int>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'limit', $pb.PbFieldType.OU3)
-    ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'puller', $pb.PbFieldType.OU3)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  pull_req_t._() : super();
-  factory pull_req_t({
-    $core.String? topic,
-    $fixnum.Int64? offset,
-    $core.int? limit,
-    $core.int? puller,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (topic != null) {
-      _result.topic = topic;
-    }
-    if (offset != null) {
-      _result.offset = offset;
-    }
-    if (limit != null) {
-      _result.limit = limit;
-    }
-    if (puller != null) {
-      _result.puller = puller;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory pull_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory pull_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  pull_req_t clone() => pull_req_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  pull_req_t copyWith(void Function(pull_req_t) updates) => super.copyWith((message) => updates(message as pull_req_t)) as pull_req_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static pull_req_t create() => pull_req_t._();
-  pull_req_t createEmptyInstance() => create();
-  static $pb.PbList<pull_req_t> createRepeated() => $pb.PbList<pull_req_t>();
-  @$core.pragma('dart2js:noInline')
-  static pull_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<pull_req_t>(create);
-  static pull_req_t? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get topic => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set topic($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasTopic() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearTopic() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $fixnum.Int64 get offset => $_getI64(1);
-  @$pb.TagNumber(2)
-  set offset($fixnum.Int64 v) { $_setInt64(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasOffset() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearOffset() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.int get limit => $_getIZ(2);
-  @$pb.TagNumber(3)
-  set limit($core.int v) { $_setUnsignedInt32(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasLimit() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearLimit() => clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.int get puller => $_getIZ(3);
-  @$pb.TagNumber(4)
-  set puller($core.int v) { $_setUnsignedInt32(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasPuller() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearPuller() => clearField(4);
-
-  @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(4);
-  @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(4, v); }
-  @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(4);
-  @$pb.TagNumber(15)
-  void clearRef() => clearField(15);
-}
-
-class pull_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pull_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..pc<msg_t>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'msgs', $pb.PbFieldType.PM, subBuilder: msg_t.create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  pull_rep_t._() : super();
-  factory pull_rep_t({
-    $core.Iterable<msg_t>? msgs,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (msgs != null) {
-      _result.msgs.addAll(msgs);
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory pull_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory pull_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  pull_rep_t clone() => pull_rep_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  pull_rep_t copyWith(void Function(pull_rep_t) updates) => super.copyWith((message) => updates(message as pull_rep_t)) as pull_rep_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static pull_rep_t create() => pull_rep_t._();
-  pull_rep_t createEmptyInstance() => create();
-  static $pb.PbList<pull_rep_t> createRepeated() => $pb.PbList<pull_rep_t>();
-  @$core.pragma('dart2js:noInline')
-  static pull_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<pull_rep_t>(create);
-  static pull_rep_t? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<msg_t> get msgs => $_getList(0);
-
-  @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(1);
-  @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(1, v); }
-  @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(1);
-  @$pb.TagNumber(15)
-  void clearRef() => clearField(15);
-}
-
 class push_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'push_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'topic')
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
+  factory push_req_t() => create();
   push_req_t._() : super();
-  factory push_req_t({
-    $core.String? topic,
-    $core.List<$core.int>? value,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (topic != null) {
-      _result.topic = topic;
-    }
-    if (value != null) {
-      _result.value = value;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
   factory push_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory push_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'push_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'topic')
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -301,8 +122,10 @@ class push_req_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  push_req_t copyWith(void Function(push_req_t) updates) => super.copyWith((message) => updates(message as push_req_t)) as push_req_t; // ignore: deprecated_member_use
+  push_req_t copyWith(void Function(push_req_t) updates) => super.copyWith((message) => updates(message as push_req_t)) as push_req_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static push_req_t create() => push_req_t._();
   push_req_t createEmptyInstance() => create();
@@ -340,23 +163,16 @@ class push_req_t extends $pb.GeneratedMessage {
 }
 
 class push_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'push_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+  factory push_rep_t() => create();
+  push_rep_t._() : super();
+  factory push_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory push_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'push_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  push_rep_t._() : super();
-  factory push_rep_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory push_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory push_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -366,8 +182,10 @@ class push_rep_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  push_rep_t copyWith(void Function(push_rep_t) updates) => super.copyWith((message) => updates(message as push_rep_t)) as push_rep_t; // ignore: deprecated_member_use
+  push_rep_t copyWith(void Function(push_rep_t) updates) => super.copyWith((message) => updates(message as push_rep_t)) as push_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static push_rep_t create() => push_rep_t._();
   push_rep_t createEmptyInstance() => create();
@@ -386,323 +204,344 @@ class push_rep_t extends $pb.GeneratedMessage {
   void clearRef() => clearField(15);
 }
 
-class do_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'do_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value')
-    ..aOB(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sourceEnabled')
-    ..aOM<source_t>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'source', subBuilder: source_t.create)
-    ..pc<trace_t>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'traces', $pb.PbFieldType.PM, subBuilder: trace_t.create)
+class pull_req_t extends $pb.GeneratedMessage {
+  factory pull_req_t() => create();
+  pull_req_t._() : super();
+  factory pull_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory pull_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'pull_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'topic')
+    ..aInt64(2, _omitFieldNames ? '' : 'offset')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'limit', $pb.PbFieldType.OU3)
+    ..a<$core.int>(13, _omitFieldNames ? '' : 'conn0Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(14, _omitFieldNames ? '' : 'conn1Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  do_req_t._() : super();
-  factory do_req_t({
-    $core.String? type,
-    $core.String? value,
-    $core.bool? sourceEnabled,
-    source_t? source,
-    $core.Iterable<trace_t>? traces,
-  }) {
-    final _result = create();
-    if (type != null) {
-      _result.type = type;
-    }
-    if (value != null) {
-      _result.value = value;
-    }
-    if (sourceEnabled != null) {
-      _result.sourceEnabled = sourceEnabled;
-    }
-    if (source != null) {
-      _result.source = source;
-    }
-    if (traces != null) {
-      _result.traces.addAll(traces);
-    }
-    return _result;
-  }
-  factory do_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory do_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  do_req_t clone() => do_req_t()..mergeFromMessage(this);
+  pull_req_t clone() => pull_req_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  do_req_t copyWith(void Function(do_req_t) updates) => super.copyWith((message) => updates(message as do_req_t)) as do_req_t; // ignore: deprecated_member_use
+  pull_req_t copyWith(void Function(pull_req_t) updates) => super.copyWith((message) => updates(message as pull_req_t)) as pull_req_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static do_req_t create() => do_req_t._();
-  do_req_t createEmptyInstance() => create();
-  static $pb.PbList<do_req_t> createRepeated() => $pb.PbList<do_req_t>();
+  static pull_req_t create() => pull_req_t._();
+  pull_req_t createEmptyInstance() => create();
+  static $pb.PbList<pull_req_t> createRepeated() => $pb.PbList<pull_req_t>();
   @$core.pragma('dart2js:noInline')
-  static do_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<do_req_t>(create);
-  static do_req_t? _defaultInstance;
+  static pull_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<pull_req_t>(create);
+  static pull_req_t? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get type => $_getSZ(0);
+  $core.String get topic => $_getSZ(0);
   @$pb.TagNumber(1)
-  set type($core.String v) { $_setString(0, v); }
+  set topic($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasType() => $_has(0);
+  $core.bool hasTopic() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearTopic() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get value => $_getSZ(1);
+  $fixnum.Int64 get offset => $_getI64(1);
   @$pb.TagNumber(2)
-  set value($core.String v) { $_setString(1, v); }
+  set offset($fixnum.Int64 v) { $_setInt64(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasValue() => $_has(1);
+  $core.bool hasOffset() => $_has(1);
   @$pb.TagNumber(2)
-  void clearValue() => clearField(2);
+  void clearOffset() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get limit => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set limit($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasLimit() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLimit() => clearField(3);
 
   @$pb.TagNumber(13)
-  $core.bool get sourceEnabled => $_getBF(2);
+  $core.int get conn0Ref => $_getIZ(3);
   @$pb.TagNumber(13)
-  set sourceEnabled($core.bool v) { $_setBool(2, v); }
+  set conn0Ref($core.int v) { $_setUnsignedInt32(3, v); }
   @$pb.TagNumber(13)
-  $core.bool hasSourceEnabled() => $_has(2);
+  $core.bool hasConn0Ref() => $_has(3);
   @$pb.TagNumber(13)
-  void clearSourceEnabled() => clearField(13);
+  void clearConn0Ref() => clearField(13);
 
   @$pb.TagNumber(14)
-  source_t get source => $_getN(3);
+  $core.int get conn1Ref => $_getIZ(4);
   @$pb.TagNumber(14)
-  set source(source_t v) { setField(14, v); }
+  set conn1Ref($core.int v) { $_setUnsignedInt32(4, v); }
   @$pb.TagNumber(14)
-  $core.bool hasSource() => $_has(3);
+  $core.bool hasConn1Ref() => $_has(4);
   @$pb.TagNumber(14)
-  void clearSource() => clearField(14);
-  @$pb.TagNumber(14)
-  source_t ensureSource() => $_ensure(3);
+  void clearConn1Ref() => clearField(14);
 
   @$pb.TagNumber(15)
-  $core.List<trace_t> get traces => $_getList(4);
+  $core.int get ref => $_getIZ(5);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(5, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(5);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
 }
 
-class do_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'do_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value')
-    ..pc<trace_t>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'traces', $pb.PbFieldType.PM, subBuilder: trace_t.create)
+class pull_rep_t extends $pb.GeneratedMessage {
+  factory pull_rep_t() => create();
+  pull_rep_t._() : super();
+  factory pull_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory pull_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'pull_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..pc<msg_t>(1, _omitFieldNames ? '' : 'msgs', $pb.PbFieldType.PM, subBuilder: msg_t.create)
+    ..a<$core.int>(13, _omitFieldNames ? '' : 'conn0Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(14, _omitFieldNames ? '' : 'conn1Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  do_rep_t._() : super();
-  factory do_rep_t({
-    $core.String? value,
-    $core.Iterable<trace_t>? traces,
-  }) {
-    final _result = create();
-    if (value != null) {
-      _result.value = value;
-    }
-    if (traces != null) {
-      _result.traces.addAll(traces);
-    }
-    return _result;
-  }
-  factory do_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory do_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  do_rep_t clone() => do_rep_t()..mergeFromMessage(this);
+  pull_rep_t clone() => pull_rep_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  do_rep_t copyWith(void Function(do_rep_t) updates) => super.copyWith((message) => updates(message as do_rep_t)) as do_rep_t; // ignore: deprecated_member_use
+  pull_rep_t copyWith(void Function(pull_rep_t) updates) => super.copyWith((message) => updates(message as pull_rep_t)) as pull_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static do_rep_t create() => do_rep_t._();
-  do_rep_t createEmptyInstance() => create();
-  static $pb.PbList<do_rep_t> createRepeated() => $pb.PbList<do_rep_t>();
+  static pull_rep_t create() => pull_rep_t._();
+  pull_rep_t createEmptyInstance() => create();
+  static $pb.PbList<pull_rep_t> createRepeated() => $pb.PbList<pull_rep_t>();
   @$core.pragma('dart2js:noInline')
-  static do_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<do_rep_t>(create);
-  static do_rep_t? _defaultInstance;
+  static pull_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<pull_rep_t>(create);
+  static pull_rep_t? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get value => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set value($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasValue() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearValue() => clearField(1);
+  $core.List<msg_t> get msgs => $_getList(0);
+
+  @$pb.TagNumber(13)
+  $core.int get conn0Ref => $_getIZ(1);
+  @$pb.TagNumber(13)
+  set conn0Ref($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasConn0Ref() => $_has(1);
+  @$pb.TagNumber(13)
+  void clearConn0Ref() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.int get conn1Ref => $_getIZ(2);
+  @$pb.TagNumber(14)
+  set conn1Ref($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasConn1Ref() => $_has(2);
+  @$pb.TagNumber(14)
+  void clearConn1Ref() => clearField(14);
 
   @$pb.TagNumber(15)
-  $core.List<trace_t> get traces => $_getList(1);
+  $core.int get ref => $_getIZ(3);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(3, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(3);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
 }
 
-class do2_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'do2_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
-    ..aOB(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sourceEnabled')
-    ..aOM<source_t>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'source', subBuilder: source_t.create)
-    ..pc<trace_t>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'traces', $pb.PbFieldType.PM, subBuilder: trace_t.create)
+class req_req_t extends $pb.GeneratedMessage {
+  factory req_req_t() => create();
+  req_req_t._() : super();
+  factory req_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory req_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'req_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'path')
+    ..aOS(2, _omitFieldNames ? '' : 'payload')
+    ..aOM<header_t>(12, _omitFieldNames ? '' : 'header', subBuilder: header_t.create)
+    ..a<$core.int>(13, _omitFieldNames ? '' : 'conn0Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(14, _omitFieldNames ? '' : 'conn1Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  do2_req_t._() : super();
-  factory do2_req_t({
-    $core.String? type,
-    $core.bool? sourceEnabled,
-    source_t? source,
-    $core.Iterable<trace_t>? traces,
-  }) {
-    final _result = create();
-    if (type != null) {
-      _result.type = type;
-    }
-    if (sourceEnabled != null) {
-      _result.sourceEnabled = sourceEnabled;
-    }
-    if (source != null) {
-      _result.source = source;
-    }
-    if (traces != null) {
-      _result.traces.addAll(traces);
-    }
-    return _result;
-  }
-  factory do2_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory do2_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  do2_req_t clone() => do2_req_t()..mergeFromMessage(this);
+  req_req_t clone() => req_req_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  do2_req_t copyWith(void Function(do2_req_t) updates) => super.copyWith((message) => updates(message as do2_req_t)) as do2_req_t; // ignore: deprecated_member_use
+  req_req_t copyWith(void Function(req_req_t) updates) => super.copyWith((message) => updates(message as req_req_t)) as req_req_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static do2_req_t create() => do2_req_t._();
-  do2_req_t createEmptyInstance() => create();
-  static $pb.PbList<do2_req_t> createRepeated() => $pb.PbList<do2_req_t>();
+  static req_req_t create() => req_req_t._();
+  req_req_t createEmptyInstance() => create();
+  static $pb.PbList<req_req_t> createRepeated() => $pb.PbList<req_req_t>();
   @$core.pragma('dart2js:noInline')
-  static do2_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<do2_req_t>(create);
-  static do2_req_t? _defaultInstance;
+  static req_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<req_req_t>(create);
+  static req_req_t? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get type => $_getSZ(0);
+  $core.String get path => $_getSZ(0);
   @$pb.TagNumber(1)
-  set type($core.String v) { $_setString(0, v); }
+  set path($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasType() => $_has(0);
+  $core.bool hasPath() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearPath() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get payload => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set payload($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasPayload() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPayload() => clearField(2);
+
+  @$pb.TagNumber(12)
+  header_t get header => $_getN(2);
+  @$pb.TagNumber(12)
+  set header(header_t v) { setField(12, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasHeader() => $_has(2);
+  @$pb.TagNumber(12)
+  void clearHeader() => clearField(12);
+  @$pb.TagNumber(12)
+  header_t ensureHeader() => $_ensure(2);
 
   @$pb.TagNumber(13)
-  $core.bool get sourceEnabled => $_getBF(1);
+  $core.int get conn0Ref => $_getIZ(3);
   @$pb.TagNumber(13)
-  set sourceEnabled($core.bool v) { $_setBool(1, v); }
+  set conn0Ref($core.int v) { $_setUnsignedInt32(3, v); }
   @$pb.TagNumber(13)
-  $core.bool hasSourceEnabled() => $_has(1);
+  $core.bool hasConn0Ref() => $_has(3);
   @$pb.TagNumber(13)
-  void clearSourceEnabled() => clearField(13);
+  void clearConn0Ref() => clearField(13);
 
   @$pb.TagNumber(14)
-  source_t get source => $_getN(2);
+  $core.int get conn1Ref => $_getIZ(4);
   @$pb.TagNumber(14)
-  set source(source_t v) { setField(14, v); }
+  set conn1Ref($core.int v) { $_setUnsignedInt32(4, v); }
   @$pb.TagNumber(14)
-  $core.bool hasSource() => $_has(2);
+  $core.bool hasConn1Ref() => $_has(4);
   @$pb.TagNumber(14)
-  void clearSource() => clearField(14);
-  @$pb.TagNumber(14)
-  source_t ensureSource() => $_ensure(2);
+  void clearConn1Ref() => clearField(14);
 
   @$pb.TagNumber(15)
-  $core.List<trace_t> get traces => $_getList(3);
+  $core.int get ref => $_getIZ(5);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(5, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(5);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
 }
 
-class do2_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'do2_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..pc<trace_t>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'traces', $pb.PbFieldType.PM, subBuilder: trace_t.create)
+class req_rep_t extends $pb.GeneratedMessage {
+  factory req_rep_t() => create();
+  req_rep_t._() : super();
+  factory req_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory req_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'req_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'payload')
+    ..a<$core.int>(13, _omitFieldNames ? '' : 'conn0Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(14, _omitFieldNames ? '' : 'conn1Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  do2_rep_t._() : super();
-  factory do2_rep_t({
-    $core.List<$core.int>? value,
-    $core.Iterable<trace_t>? traces,
-  }) {
-    final _result = create();
-    if (value != null) {
-      _result.value = value;
-    }
-    if (traces != null) {
-      _result.traces.addAll(traces);
-    }
-    return _result;
-  }
-  factory do2_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory do2_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  do2_rep_t clone() => do2_rep_t()..mergeFromMessage(this);
+  req_rep_t clone() => req_rep_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  do2_rep_t copyWith(void Function(do2_rep_t) updates) => super.copyWith((message) => updates(message as do2_rep_t)) as do2_rep_t; // ignore: deprecated_member_use
+  req_rep_t copyWith(void Function(req_rep_t) updates) => super.copyWith((message) => updates(message as req_rep_t)) as req_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static do2_rep_t create() => do2_rep_t._();
-  do2_rep_t createEmptyInstance() => create();
-  static $pb.PbList<do2_rep_t> createRepeated() => $pb.PbList<do2_rep_t>();
+  static req_rep_t create() => req_rep_t._();
+  req_rep_t createEmptyInstance() => create();
+  static $pb.PbList<req_rep_t> createRepeated() => $pb.PbList<req_rep_t>();
   @$core.pragma('dart2js:noInline')
-  static do2_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<do2_rep_t>(create);
-  static do2_rep_t? _defaultInstance;
+  static req_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<req_rep_t>(create);
+  static req_rep_t? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$core.int> get value => $_getN(0);
+  $core.String get payload => $_getSZ(0);
   @$pb.TagNumber(1)
-  set value($core.List<$core.int> v) { $_setBytes(0, v); }
+  set payload($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasValue() => $_has(0);
+  $core.bool hasPayload() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValue() => clearField(1);
+  void clearPayload() => clearField(1);
+
+  @$pb.TagNumber(13)
+  $core.int get conn0Ref => $_getIZ(1);
+  @$pb.TagNumber(13)
+  set conn0Ref($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasConn0Ref() => $_has(1);
+  @$pb.TagNumber(13)
+  void clearConn0Ref() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.int get conn1Ref => $_getIZ(2);
+  @$pb.TagNumber(14)
+  set conn1Ref($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasConn1Ref() => $_has(2);
+  @$pb.TagNumber(14)
+  void clearConn1Ref() => clearField(14);
 
   @$pb.TagNumber(15)
-  $core.List<trace_t> get traces => $_getList(1);
+  $core.int get ref => $_getIZ(3);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(3, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(3);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
 }
 
 class auth_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'auth_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'token')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+  factory auth_req_t() => create();
+  auth_req_t._() : super();
+  factory auth_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory auth_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'auth_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'token')
+    ..a<$core.int>(13, _omitFieldNames ? '' : 'conn0Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(14, _omitFieldNames ? '' : 'conn1Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  auth_req_t._() : super();
-  factory auth_req_t({
-    $core.String? token,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (token != null) {
-      _result.token = token;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory auth_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory auth_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -712,8 +551,10 @@ class auth_req_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  auth_req_t copyWith(void Function(auth_req_t) updates) => super.copyWith((message) => updates(message as auth_req_t)) as auth_req_t; // ignore: deprecated_member_use
+  auth_req_t copyWith(void Function(auth_req_t) updates) => super.copyWith((message) => updates(message as auth_req_t)) as auth_req_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static auth_req_t create() => auth_req_t._();
   auth_req_t createEmptyInstance() => create();
@@ -731,34 +572,47 @@ class auth_req_t extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearToken() => clearField(1);
 
+  @$pb.TagNumber(13)
+  $core.int get conn0Ref => $_getIZ(1);
+  @$pb.TagNumber(13)
+  set conn0Ref($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasConn0Ref() => $_has(1);
+  @$pb.TagNumber(13)
+  void clearConn0Ref() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.int get conn1Ref => $_getIZ(2);
+  @$pb.TagNumber(14)
+  set conn1Ref($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasConn1Ref() => $_has(2);
+  @$pb.TagNumber(14)
+  void clearConn1Ref() => clearField(14);
+
   @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(1);
+  $core.int get ref => $_getIZ(3);
   @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(1, v); }
+  set ref($core.int v) { $_setUnsignedInt32(3, v); }
   @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(1);
+  $core.bool hasRef() => $_has(3);
   @$pb.TagNumber(15)
   void clearRef() => clearField(15);
 }
 
 class auth_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'auth_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+  factory auth_rep_t() => create();
+  auth_rep_t._() : super();
+  factory auth_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory auth_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'auth_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(13, _omitFieldNames ? '' : 'conn0Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(14, _omitFieldNames ? '' : 'conn1Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  auth_rep_t._() : super();
-  factory auth_rep_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory auth_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory auth_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -768,8 +622,10 @@ class auth_rep_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  auth_rep_t copyWith(void Function(auth_rep_t) updates) => super.copyWith((message) => updates(message as auth_rep_t)) as auth_rep_t; // ignore: deprecated_member_use
+  auth_rep_t copyWith(void Function(auth_rep_t) updates) => super.copyWith((message) => updates(message as auth_rep_t)) as auth_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static auth_rep_t create() => auth_rep_t._();
   auth_rep_t createEmptyInstance() => create();
@@ -778,34 +634,45 @@ class auth_rep_t extends $pb.GeneratedMessage {
   static auth_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<auth_rep_t>(create);
   static auth_rep_t? _defaultInstance;
 
+  @$pb.TagNumber(13)
+  $core.int get conn0Ref => $_getIZ(0);
+  @$pb.TagNumber(13)
+  set conn0Ref($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasConn0Ref() => $_has(0);
+  @$pb.TagNumber(13)
+  void clearConn0Ref() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.int get conn1Ref => $_getIZ(1);
+  @$pb.TagNumber(14)
+  set conn1Ref($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasConn1Ref() => $_has(1);
+  @$pb.TagNumber(14)
+  void clearConn1Ref() => clearField(14);
+
   @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(0);
+  $core.int get ref => $_getIZ(2);
   @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(0, v); }
+  set ref($core.int v) { $_setUnsignedInt32(2, v); }
   @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(0);
+  $core.bool hasRef() => $_has(2);
   @$pb.TagNumber(15)
   void clearRef() => clearField(15);
 }
 
 class ok_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ok_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+  factory ok_rep_t() => create();
+  ok_rep_t._() : super();
+  factory ok_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ok_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ok_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  ok_rep_t._() : super();
-  factory ok_rep_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory ok_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ok_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -815,8 +682,10 @@ class ok_rep_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ok_rep_t copyWith(void Function(ok_rep_t) updates) => super.copyWith((message) => updates(message as ok_rep_t)) as ok_rep_t; // ignore: deprecated_member_use
+  ok_rep_t copyWith(void Function(ok_rep_t) updates) => super.copyWith((message) => updates(message as ok_rep_t)) as ok_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ok_rep_t create() => ok_rep_t._();
   ok_rep_t createEmptyInstance() => create();
@@ -836,33 +705,18 @@ class ok_rep_t extends $pb.GeneratedMessage {
 }
 
 class error_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'error_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'code', $pb.PbFieldType.O3)
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'desc')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+  factory error_rep_t() => create();
+  error_rep_t._() : super();
+  factory error_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory error_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'error_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'code', $pb.PbFieldType.O3)
+    ..aOS(2, _omitFieldNames ? '' : 'desc')
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  error_rep_t._() : super();
-  factory error_rep_t({
-    $core.int? code,
-    $core.String? desc,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (code != null) {
-      _result.code = code;
-    }
-    if (desc != null) {
-      _result.desc = desc;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory error_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory error_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -872,8 +726,10 @@ class error_rep_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  error_rep_t copyWith(void Function(error_rep_t) updates) => super.copyWith((message) => updates(message as error_rep_t)) as error_rep_t; // ignore: deprecated_member_use
+  error_rep_t copyWith(void Function(error_rep_t) updates) => super.copyWith((message) => updates(message as error_rep_t)) as error_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static error_rep_t create() => error_rep_t._();
   error_rep_t createEmptyInstance() => create();
@@ -911,23 +767,18 @@ class error_rep_t extends $pb.GeneratedMessage {
 }
 
 class ok2_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ok2_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..pc<trace_t>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'traces', $pb.PbFieldType.PM, subBuilder: trace_t.create)
+  factory ok2_rep_t() => create();
+  ok2_rep_t._() : super();
+  factory ok2_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ok2_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ok2_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(13, _omitFieldNames ? '' : 'conn0Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(14, _omitFieldNames ? '' : 'conn1Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  ok2_rep_t._() : super();
-  factory ok2_rep_t({
-    $core.Iterable<trace_t>? traces,
-  }) {
-    final _result = create();
-    if (traces != null) {
-      _result.traces.addAll(traces);
-    }
-    return _result;
-  }
-  factory ok2_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory ok2_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -937,8 +788,10 @@ class ok2_rep_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ok2_rep_t copyWith(void Function(ok2_rep_t) updates) => super.copyWith((message) => updates(message as ok2_rep_t)) as ok2_rep_t; // ignore: deprecated_member_use
+  ok2_rep_t copyWith(void Function(ok2_rep_t) updates) => super.copyWith((message) => updates(message as ok2_rep_t)) as ok2_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ok2_rep_t create() => ok2_rep_t._();
   ok2_rep_t createEmptyInstance() => create();
@@ -947,38 +800,49 @@ class ok2_rep_t extends $pb.GeneratedMessage {
   static ok2_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ok2_rep_t>(create);
   static ok2_rep_t? _defaultInstance;
 
+  @$pb.TagNumber(13)
+  $core.int get conn0Ref => $_getIZ(0);
+  @$pb.TagNumber(13)
+  set conn0Ref($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasConn0Ref() => $_has(0);
+  @$pb.TagNumber(13)
+  void clearConn0Ref() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.int get conn1Ref => $_getIZ(1);
+  @$pb.TagNumber(14)
+  set conn1Ref($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasConn1Ref() => $_has(1);
+  @$pb.TagNumber(14)
+  void clearConn1Ref() => clearField(14);
+
   @$pb.TagNumber(15)
-  $core.List<trace_t> get traces => $_getList(0);
+  $core.int get ref => $_getIZ(2);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(2);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
 }
 
 class error2_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'error2_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'code', $pb.PbFieldType.O3)
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'desc')
-    ..pc<trace_t>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'traces', $pb.PbFieldType.PM, subBuilder: trace_t.create)
+  factory error2_rep_t() => create();
+  error2_rep_t._() : super();
+  factory error2_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory error2_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'error2_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'code', $pb.PbFieldType.O3)
+    ..aOS(2, _omitFieldNames ? '' : 'desc')
+    ..a<$core.int>(13, _omitFieldNames ? '' : 'conn0Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(14, _omitFieldNames ? '' : 'conn1Ref', $pb.PbFieldType.OU3)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  error2_rep_t._() : super();
-  factory error2_rep_t({
-    $core.int? code,
-    $core.String? desc,
-    $core.Iterable<trace_t>? traces,
-  }) {
-    final _result = create();
-    if (code != null) {
-      _result.code = code;
-    }
-    if (desc != null) {
-      _result.desc = desc;
-    }
-    if (traces != null) {
-      _result.traces.addAll(traces);
-    }
-    return _result;
-  }
-  factory error2_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory error2_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -988,8 +852,10 @@ class error2_rep_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  error2_rep_t copyWith(void Function(error2_rep_t) updates) => super.copyWith((message) => updates(message as error2_rep_t)) as error2_rep_t; // ignore: deprecated_member_use
+  error2_rep_t copyWith(void Function(error2_rep_t) updates) => super.copyWith((message) => updates(message as error2_rep_t)) as error2_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static error2_rep_t create() => error2_rep_t._();
   error2_rep_t createEmptyInstance() => create();
@@ -1016,249 +882,48 @@ class error2_rep_t extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDesc() => clearField(2);
 
-  @$pb.TagNumber(15)
-  $core.List<trace_t> get traces => $_getList(2);
-}
+  @$pb.TagNumber(13)
+  $core.int get conn0Ref => $_getIZ(2);
+  @$pb.TagNumber(13)
+  set conn0Ref($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasConn0Ref() => $_has(2);
+  @$pb.TagNumber(13)
+  void clearConn0Ref() => clearField(13);
 
-class watch_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'watch_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  watch_req_t._() : super();
-  factory watch_req_t({
-    $core.String? type,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (type != null) {
-      _result.type = type;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory watch_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory watch_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  watch_req_t clone() => watch_req_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  watch_req_t copyWith(void Function(watch_req_t) updates) => super.copyWith((message) => updates(message as watch_req_t)) as watch_req_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static watch_req_t create() => watch_req_t._();
-  watch_req_t createEmptyInstance() => create();
-  static $pb.PbList<watch_req_t> createRepeated() => $pb.PbList<watch_req_t>();
-  @$core.pragma('dart2js:noInline')
-  static watch_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<watch_req_t>(create);
-  static watch_req_t? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get type => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set type($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasType() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  @$pb.TagNumber(14)
+  $core.int get conn1Ref => $_getIZ(3);
+  @$pb.TagNumber(14)
+  set conn1Ref($core.int v) { $_setUnsignedInt32(3, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasConn1Ref() => $_has(3);
+  @$pb.TagNumber(14)
+  void clearConn1Ref() => clearField(14);
 
   @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(1);
+  $core.int get ref => $_getIZ(4);
   @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(1, v); }
+  set ref($core.int v) { $_setUnsignedInt32(4, v); }
   @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(1);
-  @$pb.TagNumber(15)
-  void clearRef() => clearField(15);
-}
-
-class watch_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'watch_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  watch_rep_t._() : super();
-  factory watch_rep_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory watch_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory watch_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  watch_rep_t clone() => watch_rep_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  watch_rep_t copyWith(void Function(watch_rep_t) updates) => super.copyWith((message) => updates(message as watch_rep_t)) as watch_rep_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static watch_rep_t create() => watch_rep_t._();
-  watch_rep_t createEmptyInstance() => create();
-  static $pb.PbList<watch_rep_t> createRepeated() => $pb.PbList<watch_rep_t>();
-  @$core.pragma('dart2js:noInline')
-  static watch_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<watch_rep_t>(create);
-  static watch_rep_t? _defaultInstance;
-
-  @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(0);
-  @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(0, v); }
-  @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(0);
-  @$pb.TagNumber(15)
-  void clearRef() => clearField(15);
-}
-
-class unwatch_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'unwatch_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  unwatch_req_t._() : super();
-  factory unwatch_req_t({
-    $core.String? type,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (type != null) {
-      _result.type = type;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory unwatch_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory unwatch_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  unwatch_req_t clone() => unwatch_req_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  unwatch_req_t copyWith(void Function(unwatch_req_t) updates) => super.copyWith((message) => updates(message as unwatch_req_t)) as unwatch_req_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static unwatch_req_t create() => unwatch_req_t._();
-  unwatch_req_t createEmptyInstance() => create();
-  static $pb.PbList<unwatch_req_t> createRepeated() => $pb.PbList<unwatch_req_t>();
-  @$core.pragma('dart2js:noInline')
-  static unwatch_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<unwatch_req_t>(create);
-  static unwatch_req_t? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get type => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set type($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasType() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearType() => clearField(1);
-
-  @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(1);
-  @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(1, v); }
-  @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(1);
-  @$pb.TagNumber(15)
-  void clearRef() => clearField(15);
-}
-
-class unwatch_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'unwatch_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  unwatch_rep_t._() : super();
-  factory unwatch_rep_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory unwatch_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory unwatch_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  unwatch_rep_t clone() => unwatch_rep_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  unwatch_rep_t copyWith(void Function(unwatch_rep_t) updates) => super.copyWith((message) => updates(message as unwatch_rep_t)) as unwatch_rep_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static unwatch_rep_t create() => unwatch_rep_t._();
-  unwatch_rep_t createEmptyInstance() => create();
-  static $pb.PbList<unwatch_rep_t> createRepeated() => $pb.PbList<unwatch_rep_t>();
-  @$core.pragma('dart2js:noInline')
-  static unwatch_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<unwatch_rep_t>(create);
-  static unwatch_rep_t? _defaultInstance;
-
-  @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(0);
-  @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(0, v); }
-  @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(0);
+  $core.bool hasRef() => $_has(4);
   @$pb.TagNumber(15)
   void clearRef() => clearField(15);
 }
 
 class register_frontend_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'register_frontend_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endpoint')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+  factory register_frontend_req_t() => create();
+  register_frontend_req_t._() : super();
+  factory register_frontend_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory register_frontend_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'register_frontend_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'httpPort', $pb.PbFieldType.OU3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'httpsPort', $pb.PbFieldType.OU3)
+    ..aOS(3, _omitFieldNames ? '' : 'publicIp')
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  register_frontend_req_t._() : super();
-  factory register_frontend_req_t({
-    $core.String? endpoint,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (endpoint != null) {
-      _result.endpoint = endpoint;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory register_frontend_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory register_frontend_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1268,8 +933,10 @@ class register_frontend_req_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  register_frontend_req_t copyWith(void Function(register_frontend_req_t) updates) => super.copyWith((message) => updates(message as register_frontend_req_t)) as register_frontend_req_t; // ignore: deprecated_member_use
+  register_frontend_req_t copyWith(void Function(register_frontend_req_t) updates) => super.copyWith((message) => updates(message as register_frontend_req_t)) as register_frontend_req_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static register_frontend_req_t create() => register_frontend_req_t._();
   register_frontend_req_t createEmptyInstance() => create();
@@ -1279,42 +946,53 @@ class register_frontend_req_t extends $pb.GeneratedMessage {
   static register_frontend_req_t? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get endpoint => $_getSZ(0);
+  $core.int get httpPort => $_getIZ(0);
   @$pb.TagNumber(1)
-  set endpoint($core.String v) { $_setString(0, v); }
+  set httpPort($core.int v) { $_setUnsignedInt32(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasEndpoint() => $_has(0);
+  $core.bool hasHttpPort() => $_has(0);
   @$pb.TagNumber(1)
-  void clearEndpoint() => clearField(1);
+  void clearHttpPort() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get httpsPort => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set httpsPort($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasHttpsPort() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearHttpsPort() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get publicIp => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set publicIp($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasPublicIp() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPublicIp() => clearField(3);
 
   @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(1);
+  $core.int get ref => $_getIZ(3);
   @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(1, v); }
+  set ref($core.int v) { $_setUnsignedInt32(3, v); }
   @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(1);
+  $core.bool hasRef() => $_has(3);
   @$pb.TagNumber(15)
   void clearRef() => clearField(15);
 }
 
 class register_frontend_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'register_frontend_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+  factory register_frontend_rep_t() => create();
+  register_frontend_rep_t._() : super();
+  factory register_frontend_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory register_frontend_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'register_frontend_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  register_frontend_rep_t._() : super();
-  factory register_frontend_rep_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory register_frontend_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory register_frontend_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -1324,8 +1002,10 @@ class register_frontend_rep_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  register_frontend_rep_t copyWith(void Function(register_frontend_rep_t) updates) => super.copyWith((message) => updates(message as register_frontend_rep_t)) as register_frontend_rep_t; // ignore: deprecated_member_use
+  register_frontend_rep_t copyWith(void Function(register_frontend_rep_t) updates) => super.copyWith((message) => updates(message as register_frontend_rep_t)) as register_frontend_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static register_frontend_rep_t create() => register_frontend_rep_t._();
   register_frontend_rep_t createEmptyInstance() => create();
@@ -1344,56 +1024,47 @@ class register_frontend_rep_t extends $pb.GeneratedMessage {
   void clearRef() => clearField(15);
 }
 
-class add_route_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'add_route_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+class register_backend_req_t extends $pb.GeneratedMessage {
+  factory register_backend_req_t() => create();
+  register_backend_req_t._() : super();
+  factory register_backend_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory register_backend_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'register_backend_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'httpPort', $pb.PbFieldType.OU3)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  add_route_req_t._() : super();
-  factory add_route_req_t({
-    $core.String? type,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (type != null) {
-      _result.type = type;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory add_route_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory add_route_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  add_route_req_t clone() => add_route_req_t()..mergeFromMessage(this);
+  register_backend_req_t clone() => register_backend_req_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  add_route_req_t copyWith(void Function(add_route_req_t) updates) => super.copyWith((message) => updates(message as add_route_req_t)) as add_route_req_t; // ignore: deprecated_member_use
+  register_backend_req_t copyWith(void Function(register_backend_req_t) updates) => super.copyWith((message) => updates(message as register_backend_req_t)) as register_backend_req_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static add_route_req_t create() => add_route_req_t._();
-  add_route_req_t createEmptyInstance() => create();
-  static $pb.PbList<add_route_req_t> createRepeated() => $pb.PbList<add_route_req_t>();
+  static register_backend_req_t create() => register_backend_req_t._();
+  register_backend_req_t createEmptyInstance() => create();
+  static $pb.PbList<register_backend_req_t> createRepeated() => $pb.PbList<register_backend_req_t>();
   @$core.pragma('dart2js:noInline')
-  static add_route_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<add_route_req_t>(create);
-  static add_route_req_t? _defaultInstance;
+  static register_backend_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<register_backend_req_t>(create);
+  static register_backend_req_t? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get type => $_getSZ(0);
+  $core.int get httpPort => $_getIZ(0);
   @$pb.TagNumber(1)
-  set type($core.String v) { $_setString(0, v); }
+  set httpPort($core.int v) { $_setUnsignedInt32(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasType() => $_has(0);
+  $core.bool hasHttpPort() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearHttpPort() => clearField(1);
 
   @$pb.TagNumber(15)
   $core.int get ref => $_getIZ(1);
@@ -1405,42 +1076,37 @@ class add_route_req_t extends $pb.GeneratedMessage {
   void clearRef() => clearField(15);
 }
 
-class add_route_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'add_route_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+class register_backend_rep_t extends $pb.GeneratedMessage {
+  factory register_backend_rep_t() => create();
+  register_backend_rep_t._() : super();
+  factory register_backend_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory register_backend_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'register_backend_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  add_route_rep_t._() : super();
-  factory add_route_rep_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory add_route_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory add_route_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  add_route_rep_t clone() => add_route_rep_t()..mergeFromMessage(this);
+  register_backend_rep_t clone() => register_backend_rep_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  add_route_rep_t copyWith(void Function(add_route_rep_t) updates) => super.copyWith((message) => updates(message as add_route_rep_t)) as add_route_rep_t; // ignore: deprecated_member_use
+  register_backend_rep_t copyWith(void Function(register_backend_rep_t) updates) => super.copyWith((message) => updates(message as register_backend_rep_t)) as register_backend_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static add_route_rep_t create() => add_route_rep_t._();
-  add_route_rep_t createEmptyInstance() => create();
-  static $pb.PbList<add_route_rep_t> createRepeated() => $pb.PbList<add_route_rep_t>();
+  static register_backend_rep_t create() => register_backend_rep_t._();
+  register_backend_rep_t createEmptyInstance() => create();
+  static $pb.PbList<register_backend_rep_t> createRepeated() => $pb.PbList<register_backend_rep_t>();
   @$core.pragma('dart2js:noInline')
-  static add_route_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<add_route_rep_t>(create);
-  static add_route_rep_t? _defaultInstance;
+  static register_backend_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<register_backend_rep_t>(create);
+  static register_backend_rep_t? _defaultInstance;
 
   @$pb.TagNumber(15)
   $core.int get ref => $_getIZ(0);
@@ -1452,56 +1118,47 @@ class add_route_rep_t extends $pb.GeneratedMessage {
   void clearRef() => clearField(15);
 }
 
-class delete_route_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'delete_route_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+class register_server_req_t extends $pb.GeneratedMessage {
+  factory register_server_req_t() => create();
+  register_server_req_t._() : super();
+  factory register_server_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory register_server_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'register_server_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'httpPort', $pb.PbFieldType.OU3)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  delete_route_req_t._() : super();
-  factory delete_route_req_t({
-    $core.String? type,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (type != null) {
-      _result.type = type;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory delete_route_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory delete_route_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  delete_route_req_t clone() => delete_route_req_t()..mergeFromMessage(this);
+  register_server_req_t clone() => register_server_req_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  delete_route_req_t copyWith(void Function(delete_route_req_t) updates) => super.copyWith((message) => updates(message as delete_route_req_t)) as delete_route_req_t; // ignore: deprecated_member_use
+  register_server_req_t copyWith(void Function(register_server_req_t) updates) => super.copyWith((message) => updates(message as register_server_req_t)) as register_server_req_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static delete_route_req_t create() => delete_route_req_t._();
-  delete_route_req_t createEmptyInstance() => create();
-  static $pb.PbList<delete_route_req_t> createRepeated() => $pb.PbList<delete_route_req_t>();
+  static register_server_req_t create() => register_server_req_t._();
+  register_server_req_t createEmptyInstance() => create();
+  static $pb.PbList<register_server_req_t> createRepeated() => $pb.PbList<register_server_req_t>();
   @$core.pragma('dart2js:noInline')
-  static delete_route_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<delete_route_req_t>(create);
-  static delete_route_req_t? _defaultInstance;
+  static register_server_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<register_server_req_t>(create);
+  static register_server_req_t? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get type => $_getSZ(0);
+  $core.int get httpPort => $_getIZ(0);
   @$pb.TagNumber(1)
-  set type($core.String v) { $_setString(0, v); }
+  set httpPort($core.int v) { $_setUnsignedInt32(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasType() => $_has(0);
+  $core.bool hasHttpPort() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearHttpPort() => clearField(1);
 
   @$pb.TagNumber(15)
   $core.int get ref => $_getIZ(1);
@@ -1513,42 +1170,37 @@ class delete_route_req_t extends $pb.GeneratedMessage {
   void clearRef() => clearField(15);
 }
 
-class delete_route_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'delete_route_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+class register_server_rep_t extends $pb.GeneratedMessage {
+  factory register_server_rep_t() => create();
+  register_server_rep_t._() : super();
+  factory register_server_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory register_server_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'register_server_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  delete_route_rep_t._() : super();
-  factory delete_route_rep_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory delete_route_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory delete_route_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  delete_route_rep_t clone() => delete_route_rep_t()..mergeFromMessage(this);
+  register_server_rep_t clone() => register_server_rep_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  delete_route_rep_t copyWith(void Function(delete_route_rep_t) updates) => super.copyWith((message) => updates(message as delete_route_rep_t)) as delete_route_rep_t; // ignore: deprecated_member_use
+  register_server_rep_t copyWith(void Function(register_server_rep_t) updates) => super.copyWith((message) => updates(message as register_server_rep_t)) as register_server_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static delete_route_rep_t create() => delete_route_rep_t._();
-  delete_route_rep_t createEmptyInstance() => create();
-  static $pb.PbList<delete_route_rep_t> createRepeated() => $pb.PbList<delete_route_rep_t>();
+  static register_server_rep_t create() => register_server_rep_t._();
+  register_server_rep_t createEmptyInstance() => create();
+  static $pb.PbList<register_server_rep_t> createRepeated() => $pb.PbList<register_server_rep_t>();
   @$core.pragma('dart2js:noInline')
-  static delete_route_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<delete_route_rep_t>(create);
-  static delete_route_rep_t? _defaultInstance;
+  static register_server_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<register_server_rep_t>(create);
+  static register_server_rep_t? _defaultInstance;
 
   @$pb.TagNumber(15)
   $core.int get ref => $_getIZ(0);
@@ -1560,56 +1212,41 @@ class delete_route_rep_t extends $pb.GeneratedMessage {
   void clearRef() => clearField(15);
 }
 
-class add_route_msg_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'add_route_msg_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endpoint')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+class add_routes_req_t extends $pb.GeneratedMessage {
+  factory add_routes_req_t() => create();
+  add_routes_req_t._() : super();
+  factory add_routes_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory add_routes_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'add_routes_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'paths')
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  add_route_msg_t._() : super();
-  factory add_route_msg_t({
-    $core.String? endpoint,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (endpoint != null) {
-      _result.endpoint = endpoint;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory add_route_msg_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory add_route_msg_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  add_route_msg_t clone() => add_route_msg_t()..mergeFromMessage(this);
+  add_routes_req_t clone() => add_routes_req_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  add_route_msg_t copyWith(void Function(add_route_msg_t) updates) => super.copyWith((message) => updates(message as add_route_msg_t)) as add_route_msg_t; // ignore: deprecated_member_use
+  add_routes_req_t copyWith(void Function(add_routes_req_t) updates) => super.copyWith((message) => updates(message as add_routes_req_t)) as add_routes_req_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static add_route_msg_t create() => add_route_msg_t._();
-  add_route_msg_t createEmptyInstance() => create();
-  static $pb.PbList<add_route_msg_t> createRepeated() => $pb.PbList<add_route_msg_t>();
+  static add_routes_req_t create() => add_routes_req_t._();
+  add_routes_req_t createEmptyInstance() => create();
+  static $pb.PbList<add_routes_req_t> createRepeated() => $pb.PbList<add_routes_req_t>();
   @$core.pragma('dart2js:noInline')
-  static add_route_msg_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<add_route_msg_t>(create);
-  static add_route_msg_t? _defaultInstance;
+  static add_routes_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<add_routes_req_t>(create);
+  static add_routes_req_t? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get endpoint => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set endpoint($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasEndpoint() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearEndpoint() => clearField(1);
+  $core.List<$core.String> get paths => $_getList(0);
 
   @$pb.TagNumber(15)
   $core.int get ref => $_getIZ(1);
@@ -1621,61 +1258,266 @@ class add_route_msg_t extends $pb.GeneratedMessage {
   void clearRef() => clearField(15);
 }
 
-class delete_route_msg_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'delete_route_msg_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endpoint')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+class add_routes_rep_t extends $pb.GeneratedMessage {
+  factory add_routes_rep_t() => create();
+  add_routes_rep_t._() : super();
+  factory add_routes_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory add_routes_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'add_routes_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  delete_route_msg_t._() : super();
-  factory delete_route_msg_t({
-    $core.String? type,
-    $core.String? endpoint,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (type != null) {
-      _result.type = type;
-    }
-    if (endpoint != null) {
-      _result.endpoint = endpoint;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory delete_route_msg_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory delete_route_msg_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  delete_route_msg_t clone() => delete_route_msg_t()..mergeFromMessage(this);
+  add_routes_rep_t clone() => add_routes_rep_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  delete_route_msg_t copyWith(void Function(delete_route_msg_t) updates) => super.copyWith((message) => updates(message as delete_route_msg_t)) as delete_route_msg_t; // ignore: deprecated_member_use
+  add_routes_rep_t copyWith(void Function(add_routes_rep_t) updates) => super.copyWith((message) => updates(message as add_routes_rep_t)) as add_routes_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static delete_route_msg_t create() => delete_route_msg_t._();
-  delete_route_msg_t createEmptyInstance() => create();
-  static $pb.PbList<delete_route_msg_t> createRepeated() => $pb.PbList<delete_route_msg_t>();
+  static add_routes_rep_t create() => add_routes_rep_t._();
+  add_routes_rep_t createEmptyInstance() => create();
+  static $pb.PbList<add_routes_rep_t> createRepeated() => $pb.PbList<add_routes_rep_t>();
   @$core.pragma('dart2js:noInline')
-  static delete_route_msg_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<delete_route_msg_t>(create);
-  static delete_route_msg_t? _defaultInstance;
+  static add_routes_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<add_routes_rep_t>(create);
+  static add_routes_rep_t? _defaultInstance;
+
+  @$pb.TagNumber(15)
+  $core.int get ref => $_getIZ(0);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(0);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
+}
+
+class delete_routes_req_t extends $pb.GeneratedMessage {
+  factory delete_routes_req_t() => create();
+  delete_routes_req_t._() : super();
+  factory delete_routes_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory delete_routes_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'delete_routes_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'paths')
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  delete_routes_req_t clone() => delete_routes_req_t()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  delete_routes_req_t copyWith(void Function(delete_routes_req_t) updates) => super.copyWith((message) => updates(message as delete_routes_req_t)) as delete_routes_req_t;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static delete_routes_req_t create() => delete_routes_req_t._();
+  delete_routes_req_t createEmptyInstance() => create();
+  static $pb.PbList<delete_routes_req_t> createRepeated() => $pb.PbList<delete_routes_req_t>();
+  @$core.pragma('dart2js:noInline')
+  static delete_routes_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<delete_routes_req_t>(create);
+  static delete_routes_req_t? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get type => $_getSZ(0);
+  $core.List<$core.String> get paths => $_getList(0);
+
+  @$pb.TagNumber(15)
+  $core.int get ref => $_getIZ(1);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(1);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
+}
+
+class delete_routes_rep_t extends $pb.GeneratedMessage {
+  factory delete_routes_rep_t() => create();
+  delete_routes_rep_t._() : super();
+  factory delete_routes_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory delete_routes_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'delete_routes_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  delete_routes_rep_t clone() => delete_routes_rep_t()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  delete_routes_rep_t copyWith(void Function(delete_routes_rep_t) updates) => super.copyWith((message) => updates(message as delete_routes_rep_t)) as delete_routes_rep_t;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static delete_routes_rep_t create() => delete_routes_rep_t._();
+  delete_routes_rep_t createEmptyInstance() => create();
+  static $pb.PbList<delete_routes_rep_t> createRepeated() => $pb.PbList<delete_routes_rep_t>();
+  @$core.pragma('dart2js:noInline')
+  static delete_routes_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<delete_routes_rep_t>(create);
+  static delete_routes_rep_t? _defaultInstance;
+
+  @$pb.TagNumber(15)
+  $core.int get ref => $_getIZ(0);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(0);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
+}
+
+class get_routes_req_t extends $pb.GeneratedMessage {
+  factory get_routes_req_t() => create();
+  get_routes_req_t._() : super();
+  factory get_routes_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory get_routes_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'get_routes_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  get_routes_req_t clone() => get_routes_req_t()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  get_routes_req_t copyWith(void Function(get_routes_req_t) updates) => super.copyWith((message) => updates(message as get_routes_req_t)) as get_routes_req_t;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static get_routes_req_t create() => get_routes_req_t._();
+  get_routes_req_t createEmptyInstance() => create();
+  static $pb.PbList<get_routes_req_t> createRepeated() => $pb.PbList<get_routes_req_t>();
+  @$core.pragma('dart2js:noInline')
+  static get_routes_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<get_routes_req_t>(create);
+  static get_routes_req_t? _defaultInstance;
+
+  @$pb.TagNumber(15)
+  $core.int get ref => $_getIZ(0);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(0);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
+}
+
+class get_routes_rep_t extends $pb.GeneratedMessage {
+  factory get_routes_rep_t() => create();
+  get_routes_rep_t._() : super();
+  factory get_routes_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory get_routes_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'get_routes_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..pc<route_group_t>(1, _omitFieldNames ? '' : 'routeGroups', $pb.PbFieldType.PM, subBuilder: route_group_t.create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  get_routes_rep_t clone() => get_routes_rep_t()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  get_routes_rep_t copyWith(void Function(get_routes_rep_t) updates) => super.copyWith((message) => updates(message as get_routes_rep_t)) as get_routes_rep_t;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static get_routes_rep_t create() => get_routes_rep_t._();
+  get_routes_rep_t createEmptyInstance() => create();
+  static $pb.PbList<get_routes_rep_t> createRepeated() => $pb.PbList<get_routes_rep_t>();
+  @$core.pragma('dart2js:noInline')
+  static get_routes_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<get_routes_rep_t>(create);
+  static get_routes_rep_t? _defaultInstance;
+
   @$pb.TagNumber(1)
-  set type($core.String v) { $_setString(0, v); }
+  $core.List<route_group_t> get routeGroups => $_getList(0);
+
+  @$pb.TagNumber(15)
+  $core.int get ref => $_getIZ(1);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(1);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
+}
+
+class route_added_msg_t extends $pb.GeneratedMessage {
+  factory route_added_msg_t() => create();
+  route_added_msg_t._() : super();
+  factory route_added_msg_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory route_added_msg_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'route_added_msg_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'path')
+    ..aOS(2, _omitFieldNames ? '' : 'endpoint')
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  route_added_msg_t clone() => route_added_msg_t()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  route_added_msg_t copyWith(void Function(route_added_msg_t) updates) => super.copyWith((message) => updates(message as route_added_msg_t)) as route_added_msg_t;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static route_added_msg_t create() => route_added_msg_t._();
+  route_added_msg_t createEmptyInstance() => create();
+  static $pb.PbList<route_added_msg_t> createRepeated() => $pb.PbList<route_added_msg_t>();
+  @$core.pragma('dart2js:noInline')
+  static route_added_msg_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<route_added_msg_t>(create);
+  static route_added_msg_t? _defaultInstance;
+
   @$pb.TagNumber(1)
-  $core.bool hasType() => $_has(0);
+  $core.String get path => $_getSZ(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  set path($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPath() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPath() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get endpoint => $_getSZ(1);
@@ -1696,97 +1538,171 @@ class delete_route_msg_t extends $pb.GeneratedMessage {
   void clearRef() => clearField(15);
 }
 
-class push_routes_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'push_routes_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..pPS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'types')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+class route_deleted_msg_t extends $pb.GeneratedMessage {
+  factory route_deleted_msg_t() => create();
+  route_deleted_msg_t._() : super();
+  factory route_deleted_msg_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory route_deleted_msg_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'route_deleted_msg_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'path')
+    ..aOS(2, _omitFieldNames ? '' : 'endpoint')
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  push_routes_req_t._() : super();
-  factory push_routes_req_t({
-    $core.Iterable<$core.String>? types,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (types != null) {
-      _result.types.addAll(types);
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory push_routes_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory push_routes_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  push_routes_req_t clone() => push_routes_req_t()..mergeFromMessage(this);
+  route_deleted_msg_t clone() => route_deleted_msg_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  push_routes_req_t copyWith(void Function(push_routes_req_t) updates) => super.copyWith((message) => updates(message as push_routes_req_t)) as push_routes_req_t; // ignore: deprecated_member_use
+  route_deleted_msg_t copyWith(void Function(route_deleted_msg_t) updates) => super.copyWith((message) => updates(message as route_deleted_msg_t)) as route_deleted_msg_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static push_routes_req_t create() => push_routes_req_t._();
-  push_routes_req_t createEmptyInstance() => create();
-  static $pb.PbList<push_routes_req_t> createRepeated() => $pb.PbList<push_routes_req_t>();
+  static route_deleted_msg_t create() => route_deleted_msg_t._();
+  route_deleted_msg_t createEmptyInstance() => create();
+  static $pb.PbList<route_deleted_msg_t> createRepeated() => $pb.PbList<route_deleted_msg_t>();
   @$core.pragma('dart2js:noInline')
-  static push_routes_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<push_routes_req_t>(create);
-  static push_routes_req_t? _defaultInstance;
+  static route_deleted_msg_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<route_deleted_msg_t>(create);
+  static route_deleted_msg_t? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$core.String> get types => $_getList(0);
+  $core.String get path => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set path($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPath() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPath() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get endpoint => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set endpoint($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEndpoint() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEndpoint() => clearField(2);
 
   @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(1);
+  $core.int get ref => $_getIZ(2);
   @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(1, v); }
+  set ref($core.int v) { $_setUnsignedInt32(2, v); }
   @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(1);
+  $core.bool hasRef() => $_has(2);
   @$pb.TagNumber(15)
   void clearRef() => clearField(15);
 }
 
-class push_routes_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'push_routes_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+class route_health_changed_msg_t extends $pb.GeneratedMessage {
+  factory route_health_changed_msg_t() => create();
+  route_health_changed_msg_t._() : super();
+  factory route_health_changed_msg_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory route_health_changed_msg_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'route_health_changed_msg_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'path')
+    ..aOS(2, _omitFieldNames ? '' : 'endpoint')
+    ..aOB(3, _omitFieldNames ? '' : 'isHealthy')
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  push_routes_rep_t._() : super();
-  factory push_routes_rep_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory push_routes_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory push_routes_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  push_routes_rep_t clone() => push_routes_rep_t()..mergeFromMessage(this);
+  route_health_changed_msg_t clone() => route_health_changed_msg_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  push_routes_rep_t copyWith(void Function(push_routes_rep_t) updates) => super.copyWith((message) => updates(message as push_routes_rep_t)) as push_routes_rep_t; // ignore: deprecated_member_use
+  route_health_changed_msg_t copyWith(void Function(route_health_changed_msg_t) updates) => super.copyWith((message) => updates(message as route_health_changed_msg_t)) as route_health_changed_msg_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static push_routes_rep_t create() => push_routes_rep_t._();
-  push_routes_rep_t createEmptyInstance() => create();
-  static $pb.PbList<push_routes_rep_t> createRepeated() => $pb.PbList<push_routes_rep_t>();
+  static route_health_changed_msg_t create() => route_health_changed_msg_t._();
+  route_health_changed_msg_t createEmptyInstance() => create();
+  static $pb.PbList<route_health_changed_msg_t> createRepeated() => $pb.PbList<route_health_changed_msg_t>();
   @$core.pragma('dart2js:noInline')
-  static push_routes_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<push_routes_rep_t>(create);
-  static push_routes_rep_t? _defaultInstance;
+  static route_health_changed_msg_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<route_health_changed_msg_t>(create);
+  static route_health_changed_msg_t? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get path => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set path($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPath() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPath() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get endpoint => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set endpoint($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEndpoint() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEndpoint() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.bool get isHealthy => $_getBF(2);
+  @$pb.TagNumber(3)
+  set isHealthy($core.bool v) { $_setBool(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasIsHealthy() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearIsHealthy() => clearField(3);
+
+  @$pb.TagNumber(15)
+  $core.int get ref => $_getIZ(3);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(3, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(3);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
+}
+
+class assign_frontend_req_t extends $pb.GeneratedMessage {
+  factory assign_frontend_req_t() => create();
+  assign_frontend_req_t._() : super();
+  factory assign_frontend_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory assign_frontend_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'assign_frontend_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  assign_frontend_req_t clone() => assign_frontend_req_t()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  assign_frontend_req_t copyWith(void Function(assign_frontend_req_t) updates) => super.copyWith((message) => updates(message as assign_frontend_req_t)) as assign_frontend_req_t;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static assign_frontend_req_t create() => assign_frontend_req_t._();
+  assign_frontend_req_t createEmptyInstance() => create();
+  static $pb.PbList<assign_frontend_req_t> createRepeated() => $pb.PbList<assign_frontend_req_t>();
+  @$core.pragma('dart2js:noInline')
+  static assign_frontend_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<assign_frontend_req_t>(create);
+  static assign_frontend_req_t? _defaultInstance;
 
   @$pb.TagNumber(15)
   $core.int get ref => $_getIZ(0);
@@ -1798,251 +1714,38 @@ class push_routes_rep_t extends $pb.GeneratedMessage {
   void clearRef() => clearField(15);
 }
 
-class pull_routes_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pull_routes_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+class assign_frontend_rep_t extends $pb.GeneratedMessage {
+  factory assign_frontend_rep_t() => create();
+  assign_frontend_rep_t._() : super();
+  factory assign_frontend_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory assign_frontend_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'assign_frontend_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'endpoint')
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  pull_routes_req_t._() : super();
-  factory pull_routes_req_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory pull_routes_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory pull_routes_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  pull_routes_req_t clone() => pull_routes_req_t()..mergeFromMessage(this);
+  assign_frontend_rep_t clone() => assign_frontend_rep_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  pull_routes_req_t copyWith(void Function(pull_routes_req_t) updates) => super.copyWith((message) => updates(message as pull_routes_req_t)) as pull_routes_req_t; // ignore: deprecated_member_use
+  assign_frontend_rep_t copyWith(void Function(assign_frontend_rep_t) updates) => super.copyWith((message) => updates(message as assign_frontend_rep_t)) as assign_frontend_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static pull_routes_req_t create() => pull_routes_req_t._();
-  pull_routes_req_t createEmptyInstance() => create();
-  static $pb.PbList<pull_routes_req_t> createRepeated() => $pb.PbList<pull_routes_req_t>();
+  static assign_frontend_rep_t create() => assign_frontend_rep_t._();
+  assign_frontend_rep_t createEmptyInstance() => create();
+  static $pb.PbList<assign_frontend_rep_t> createRepeated() => $pb.PbList<assign_frontend_rep_t>();
   @$core.pragma('dart2js:noInline')
-  static pull_routes_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<pull_routes_req_t>(create);
-  static pull_routes_req_t? _defaultInstance;
-
-  @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(0);
-  @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(0, v); }
-  @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(0);
-  @$pb.TagNumber(15)
-  void clearRef() => clearField(15);
-}
-
-class pull_routes_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pull_routes_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..pc<route_group_t>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'routeGroups', $pb.PbFieldType.PM, subBuilder: route_group_t.create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  pull_routes_rep_t._() : super();
-  factory pull_routes_rep_t({
-    $core.Iterable<route_group_t>? routeGroups,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (routeGroups != null) {
-      _result.routeGroups.addAll(routeGroups);
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory pull_routes_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory pull_routes_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  pull_routes_rep_t clone() => pull_routes_rep_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  pull_routes_rep_t copyWith(void Function(pull_routes_rep_t) updates) => super.copyWith((message) => updates(message as pull_routes_rep_t)) as pull_routes_rep_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static pull_routes_rep_t create() => pull_routes_rep_t._();
-  pull_routes_rep_t createEmptyInstance() => create();
-  static $pb.PbList<pull_routes_rep_t> createRepeated() => $pb.PbList<pull_routes_rep_t>();
-  @$core.pragma('dart2js:noInline')
-  static pull_routes_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<pull_routes_rep_t>(create);
-  static pull_routes_rep_t? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<route_group_t> get routeGroups => $_getList(0);
-
-  @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(1);
-  @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(1, v); }
-  @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(1);
-  @$pb.TagNumber(15)
-  void clearRef() => clearField(15);
-}
-
-class delete_topics_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'delete_topics_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..pPS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'topics')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  delete_topics_req_t._() : super();
-  factory delete_topics_req_t({
-    $core.Iterable<$core.String>? topics,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (topics != null) {
-      _result.topics.addAll(topics);
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory delete_topics_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory delete_topics_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  delete_topics_req_t clone() => delete_topics_req_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  delete_topics_req_t copyWith(void Function(delete_topics_req_t) updates) => super.copyWith((message) => updates(message as delete_topics_req_t)) as delete_topics_req_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static delete_topics_req_t create() => delete_topics_req_t._();
-  delete_topics_req_t createEmptyInstance() => create();
-  static $pb.PbList<delete_topics_req_t> createRepeated() => $pb.PbList<delete_topics_req_t>();
-  @$core.pragma('dart2js:noInline')
-  static delete_topics_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<delete_topics_req_t>(create);
-  static delete_topics_req_t? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.List<$core.String> get topics => $_getList(0);
-
-  @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(1);
-  @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(1, v); }
-  @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(1);
-  @$pb.TagNumber(15)
-  void clearRef() => clearField(15);
-}
-
-class delete_topics_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'delete_topics_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  delete_topics_rep_t._() : super();
-  factory delete_topics_rep_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory delete_topics_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory delete_topics_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  delete_topics_rep_t clone() => delete_topics_rep_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  delete_topics_rep_t copyWith(void Function(delete_topics_rep_t) updates) => super.copyWith((message) => updates(message as delete_topics_rep_t)) as delete_topics_rep_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static delete_topics_rep_t create() => delete_topics_rep_t._();
-  delete_topics_rep_t createEmptyInstance() => create();
-  static $pb.PbList<delete_topics_rep_t> createRepeated() => $pb.PbList<delete_topics_rep_t>();
-  @$core.pragma('dart2js:noInline')
-  static delete_topics_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<delete_topics_rep_t>(create);
-  static delete_topics_rep_t? _defaultInstance;
-
-  @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(0);
-  @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(0, v); }
-  @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(0);
-  @$pb.TagNumber(15)
-  void clearRef() => clearField(15);
-}
-
-class register_backend_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'register_backend_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endpoint')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  register_backend_req_t._() : super();
-  factory register_backend_req_t({
-    $core.String? endpoint,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (endpoint != null) {
-      _result.endpoint = endpoint;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory register_backend_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory register_backend_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  register_backend_req_t clone() => register_backend_req_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  register_backend_req_t copyWith(void Function(register_backend_req_t) updates) => super.copyWith((message) => updates(message as register_backend_req_t)) as register_backend_req_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static register_backend_req_t create() => register_backend_req_t._();
-  register_backend_req_t createEmptyInstance() => create();
-  static $pb.PbList<register_backend_req_t> createRepeated() => $pb.PbList<register_backend_req_t>();
-  @$core.pragma('dart2js:noInline')
-  static register_backend_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<register_backend_req_t>(create);
-  static register_backend_req_t? _defaultInstance;
+  static assign_frontend_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<assign_frontend_rep_t>(create);
+  static assign_frontend_rep_t? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get endpoint => $_getSZ(0);
@@ -2063,202 +1766,38 @@ class register_backend_req_t extends $pb.GeneratedMessage {
   void clearRef() => clearField(15);
 }
 
-class register_backend_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'register_backend_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+class locate_topic_req_t extends $pb.GeneratedMessage {
+  factory locate_topic_req_t() => create();
+  locate_topic_req_t._() : super();
+  factory locate_topic_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory locate_topic_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'locate_topic_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'topic')
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  register_backend_rep_t._() : super();
-  factory register_backend_rep_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory register_backend_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory register_backend_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  register_backend_rep_t clone() => register_backend_rep_t()..mergeFromMessage(this);
+  locate_topic_req_t clone() => locate_topic_req_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  register_backend_rep_t copyWith(void Function(register_backend_rep_t) updates) => super.copyWith((message) => updates(message as register_backend_rep_t)) as register_backend_rep_t; // ignore: deprecated_member_use
+  locate_topic_req_t copyWith(void Function(locate_topic_req_t) updates) => super.copyWith((message) => updates(message as locate_topic_req_t)) as locate_topic_req_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static register_backend_rep_t create() => register_backend_rep_t._();
-  register_backend_rep_t createEmptyInstance() => create();
-  static $pb.PbList<register_backend_rep_t> createRepeated() => $pb.PbList<register_backend_rep_t>();
+  static locate_topic_req_t create() => locate_topic_req_t._();
+  locate_topic_req_t createEmptyInstance() => create();
+  static $pb.PbList<locate_topic_req_t> createRepeated() => $pb.PbList<locate_topic_req_t>();
   @$core.pragma('dart2js:noInline')
-  static register_backend_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<register_backend_rep_t>(create);
-  static register_backend_rep_t? _defaultInstance;
-
-  @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(0);
-  @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(0, v); }
-  @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(0);
-  @$pb.TagNumber(15)
-  void clearRef() => clearField(15);
-}
-
-class resolve_frontend_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'resolve_frontend_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  resolve_frontend_req_t._() : super();
-  factory resolve_frontend_req_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory resolve_frontend_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory resolve_frontend_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  resolve_frontend_req_t clone() => resolve_frontend_req_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  resolve_frontend_req_t copyWith(void Function(resolve_frontend_req_t) updates) => super.copyWith((message) => updates(message as resolve_frontend_req_t)) as resolve_frontend_req_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static resolve_frontend_req_t create() => resolve_frontend_req_t._();
-  resolve_frontend_req_t createEmptyInstance() => create();
-  static $pb.PbList<resolve_frontend_req_t> createRepeated() => $pb.PbList<resolve_frontend_req_t>();
-  @$core.pragma('dart2js:noInline')
-  static resolve_frontend_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<resolve_frontend_req_t>(create);
-  static resolve_frontend_req_t? _defaultInstance;
-
-  @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(0);
-  @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(0, v); }
-  @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(0);
-  @$pb.TagNumber(15)
-  void clearRef() => clearField(15);
-}
-
-class resolve_frontend_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'resolve_frontend_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endpoint')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  resolve_frontend_rep_t._() : super();
-  factory resolve_frontend_rep_t({
-    $core.String? endpoint,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (endpoint != null) {
-      _result.endpoint = endpoint;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory resolve_frontend_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory resolve_frontend_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  resolve_frontend_rep_t clone() => resolve_frontend_rep_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  resolve_frontend_rep_t copyWith(void Function(resolve_frontend_rep_t) updates) => super.copyWith((message) => updates(message as resolve_frontend_rep_t)) as resolve_frontend_rep_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static resolve_frontend_rep_t create() => resolve_frontend_rep_t._();
-  resolve_frontend_rep_t createEmptyInstance() => create();
-  static $pb.PbList<resolve_frontend_rep_t> createRepeated() => $pb.PbList<resolve_frontend_rep_t>();
-  @$core.pragma('dart2js:noInline')
-  static resolve_frontend_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<resolve_frontend_rep_t>(create);
-  static resolve_frontend_rep_t? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get endpoint => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set endpoint($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasEndpoint() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearEndpoint() => clearField(1);
-
-  @$pb.TagNumber(15)
-  $core.int get ref => $_getIZ(1);
-  @$pb.TagNumber(15)
-  set ref($core.int v) { $_setUnsignedInt32(1, v); }
-  @$pb.TagNumber(15)
-  $core.bool hasRef() => $_has(1);
-  @$pb.TagNumber(15)
-  void clearRef() => clearField(15);
-}
-
-class resolve_backend_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'resolve_backend_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'topic')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false
-  ;
-
-  resolve_backend_req_t._() : super();
-  factory resolve_backend_req_t({
-    $core.String? topic,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (topic != null) {
-      _result.topic = topic;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory resolve_backend_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory resolve_backend_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  resolve_backend_req_t clone() => resolve_backend_req_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  resolve_backend_req_t copyWith(void Function(resolve_backend_req_t) updates) => super.copyWith((message) => updates(message as resolve_backend_req_t)) as resolve_backend_req_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static resolve_backend_req_t create() => resolve_backend_req_t._();
-  resolve_backend_req_t createEmptyInstance() => create();
-  static $pb.PbList<resolve_backend_req_t> createRepeated() => $pb.PbList<resolve_backend_req_t>();
-  @$core.pragma('dart2js:noInline')
-  static resolve_backend_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<resolve_backend_req_t>(create);
-  static resolve_backend_req_t? _defaultInstance;
+  static locate_topic_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<locate_topic_req_t>(create);
+  static locate_topic_req_t? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get topic => $_getSZ(0);
@@ -2279,47 +1818,38 @@ class resolve_backend_req_t extends $pb.GeneratedMessage {
   void clearRef() => clearField(15);
 }
 
-class resolve_backend_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'resolve_backend_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endpoint')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+class locate_topic_rep_t extends $pb.GeneratedMessage {
+  factory locate_topic_rep_t() => create();
+  locate_topic_rep_t._() : super();
+  factory locate_topic_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory locate_topic_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'locate_topic_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'endpoint')
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  resolve_backend_rep_t._() : super();
-  factory resolve_backend_rep_t({
-    $core.String? endpoint,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (endpoint != null) {
-      _result.endpoint = endpoint;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory resolve_backend_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory resolve_backend_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  resolve_backend_rep_t clone() => resolve_backend_rep_t()..mergeFromMessage(this);
+  locate_topic_rep_t clone() => locate_topic_rep_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  resolve_backend_rep_t copyWith(void Function(resolve_backend_rep_t) updates) => super.copyWith((message) => updates(message as resolve_backend_rep_t)) as resolve_backend_rep_t; // ignore: deprecated_member_use
+  locate_topic_rep_t copyWith(void Function(locate_topic_rep_t) updates) => super.copyWith((message) => updates(message as locate_topic_rep_t)) as locate_topic_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static resolve_backend_rep_t create() => resolve_backend_rep_t._();
-  resolve_backend_rep_t createEmptyInstance() => create();
-  static $pb.PbList<resolve_backend_rep_t> createRepeated() => $pb.PbList<resolve_backend_rep_t>();
+  static locate_topic_rep_t create() => locate_topic_rep_t._();
+  locate_topic_rep_t createEmptyInstance() => create();
+  static $pb.PbList<locate_topic_rep_t> createRepeated() => $pb.PbList<locate_topic_rep_t>();
   @$core.pragma('dart2js:noInline')
-  static resolve_backend_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<resolve_backend_rep_t>(create);
-  static resolve_backend_rep_t? _defaultInstance;
+  static locate_topic_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<locate_topic_rep_t>(create);
+  static locate_topic_rep_t? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get endpoint => $_getSZ(0);
@@ -2341,23 +1871,16 @@ class resolve_backend_rep_t extends $pb.GeneratedMessage {
 }
 
 class resolve_ip_req_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'resolve_ip_req_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+  factory resolve_ip_req_t() => create();
+  resolve_ip_req_t._() : super();
+  factory resolve_ip_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory resolve_ip_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'resolve_ip_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  resolve_ip_req_t._() : super();
-  factory resolve_ip_req_t({
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory resolve_ip_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory resolve_ip_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2367,8 +1890,10 @@ class resolve_ip_req_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  resolve_ip_req_t copyWith(void Function(resolve_ip_req_t) updates) => super.copyWith((message) => updates(message as resolve_ip_req_t)) as resolve_ip_req_t; // ignore: deprecated_member_use
+  resolve_ip_req_t copyWith(void Function(resolve_ip_req_t) updates) => super.copyWith((message) => updates(message as resolve_ip_req_t)) as resolve_ip_req_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static resolve_ip_req_t create() => resolve_ip_req_t._();
   resolve_ip_req_t createEmptyInstance() => create();
@@ -2388,28 +1913,17 @@ class resolve_ip_req_t extends $pb.GeneratedMessage {
 }
 
 class resolve_ip_rep_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'resolve_ip_rep_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ip')
-    ..a<$core.int>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
+  factory resolve_ip_rep_t() => create();
+  resolve_ip_rep_t._() : super();
+  factory resolve_ip_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory resolve_ip_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'resolve_ip_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'ip')
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
-  resolve_ip_rep_t._() : super();
-  factory resolve_ip_rep_t({
-    $core.String? ip,
-    $core.int? ref,
-  }) {
-    final _result = create();
-    if (ip != null) {
-      _result.ip = ip;
-    }
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    return _result;
-  }
-  factory resolve_ip_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory resolve_ip_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2419,8 +1933,10 @@ class resolve_ip_rep_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  resolve_ip_rep_t copyWith(void Function(resolve_ip_rep_t) updates) => super.copyWith((message) => updates(message as resolve_ip_rep_t)) as resolve_ip_rep_t; // ignore: deprecated_member_use
+  resolve_ip_rep_t copyWith(void Function(resolve_ip_rep_t) updates) => super.copyWith((message) => updates(message as resolve_ip_rep_t)) as resolve_ip_rep_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static resolve_ip_rep_t create() => resolve_ip_rep_t._();
   resolve_ip_rep_t createEmptyInstance() => create();
@@ -2449,33 +1965,18 @@ class resolve_ip_rep_t extends $pb.GeneratedMessage {
 }
 
 class msg_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'msg_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'offset', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.List<$core.int>>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OY)
-    ..a<$fixnum.Int64>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+  factory msg_t() => create();
+  msg_t._() : super();
+  factory msg_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory msg_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'msg_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'offset', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'value', $pb.PbFieldType.OY)
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'timestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
-  msg_t._() : super();
-  factory msg_t({
-    $fixnum.Int64? offset,
-    $core.List<$core.int>? value,
-    $fixnum.Int64? timestamp,
-  }) {
-    final _result = create();
-    if (offset != null) {
-      _result.offset = offset;
-    }
-    if (value != null) {
-      _result.value = value;
-    }
-    if (timestamp != null) {
-      _result.timestamp = timestamp;
-    }
-    return _result;
-  }
-  factory msg_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory msg_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2485,8 +1986,10 @@ class msg_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  msg_t copyWith(void Function(msg_t) updates) => super.copyWith((message) => updates(message as msg_t)) as msg_t; // ignore: deprecated_member_use
+  msg_t copyWith(void Function(msg_t) updates) => super.copyWith((message) => updates(message as msg_t)) as msg_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static msg_t create() => msg_t._();
   msg_t createEmptyInstance() => create();
@@ -2523,47 +2026,39 @@ class msg_t extends $pb.GeneratedMessage {
   void clearTimestamp() => clearField(3);
 }
 
-class source_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'source_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'agent')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endpoint')
+class header_t extends $pb.GeneratedMessage {
+  factory header_t() => create();
+  header_t._() : super();
+  factory header_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory header_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'header_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'agent')
+    ..aOS(2, _omitFieldNames ? '' : 'endpoint')
+    ..aOS(3, _omitFieldNames ? '' : 'token')
     ..hasRequiredFields = false
   ;
 
-  source_t._() : super();
-  factory source_t({
-    $core.String? agent,
-    $core.String? endpoint,
-  }) {
-    final _result = create();
-    if (agent != null) {
-      _result.agent = agent;
-    }
-    if (endpoint != null) {
-      _result.endpoint = endpoint;
-    }
-    return _result;
-  }
-  factory source_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory source_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  source_t clone() => source_t()..mergeFromMessage(this);
+  header_t clone() => header_t()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  source_t copyWith(void Function(source_t) updates) => super.copyWith((message) => updates(message as source_t)) as source_t; // ignore: deprecated_member_use
+  header_t copyWith(void Function(header_t) updates) => super.copyWith((message) => updates(message as header_t)) as header_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
-  static source_t create() => source_t._();
-  source_t createEmptyInstance() => create();
-  static $pb.PbList<source_t> createRepeated() => $pb.PbList<source_t>();
+  static header_t create() => header_t._();
+  header_t createEmptyInstance() => create();
+  static $pb.PbList<header_t> createRepeated() => $pb.PbList<header_t>();
   @$core.pragma('dart2js:noInline')
-  static source_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<source_t>(create);
-  static source_t? _defaultInstance;
+  static header_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<header_t>(create);
+  static header_t? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get agent => $_getSZ(0);
@@ -2582,106 +2077,30 @@ class source_t extends $pb.GeneratedMessage {
   $core.bool hasEndpoint() => $_has(1);
   @$pb.TagNumber(2)
   void clearEndpoint() => clearField(2);
-}
-
-class trace_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'trace_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ref', $pb.PbFieldType.OU3)
-    ..a<$core.int>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'handlerId', $pb.PbFieldType.OU3)
-    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nodeId', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
-
-  trace_t._() : super();
-  factory trace_t({
-    $core.int? ref,
-    $core.int? handlerId,
-    $core.List<$core.int>? nodeId,
-  }) {
-    final _result = create();
-    if (ref != null) {
-      _result.ref = ref;
-    }
-    if (handlerId != null) {
-      _result.handlerId = handlerId;
-    }
-    if (nodeId != null) {
-      _result.nodeId = nodeId;
-    }
-    return _result;
-  }
-  factory trace_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory trace_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  trace_t clone() => trace_t()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  trace_t copyWith(void Function(trace_t) updates) => super.copyWith((message) => updates(message as trace_t)) as trace_t; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static trace_t create() => trace_t._();
-  trace_t createEmptyInstance() => create();
-  static $pb.PbList<trace_t> createRepeated() => $pb.PbList<trace_t>();
-  @$core.pragma('dart2js:noInline')
-  static trace_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<trace_t>(create);
-  static trace_t? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.int get ref => $_getIZ(0);
-  @$pb.TagNumber(1)
-  set ref($core.int v) { $_setUnsignedInt32(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasRef() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearRef() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.int get handlerId => $_getIZ(1);
-  @$pb.TagNumber(2)
-  set handlerId($core.int v) { $_setUnsignedInt32(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasHandlerId() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearHandlerId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<$core.int> get nodeId => $_getN(2);
+  $core.String get token => $_getSZ(2);
   @$pb.TagNumber(3)
-  set nodeId($core.List<$core.int> v) { $_setBytes(2, v); }
+  set token($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasNodeId() => $_has(2);
+  $core.bool hasToken() => $_has(2);
   @$pb.TagNumber(3)
-  void clearNodeId() => clearField(3);
+  void clearToken() => clearField(3);
 }
 
 class route_group_t extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'route_group_t', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'maxwell.protocol'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
-    ..pPS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endpoints')
+  factory route_group_t() => create();
+  route_group_t._() : super();
+  factory route_group_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory route_group_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'route_group_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'path')
+    ..pPS(2, _omitFieldNames ? '' : 'healthyEndpoints')
+    ..pPS(3, _omitFieldNames ? '' : 'unhealthyEndpoints')
     ..hasRequiredFields = false
   ;
 
-  route_group_t._() : super();
-  factory route_group_t({
-    $core.String? type,
-    $core.Iterable<$core.String>? endpoints,
-  }) {
-    final _result = create();
-    if (type != null) {
-      _result.type = type;
-    }
-    if (endpoints != null) {
-      _result.endpoints.addAll(endpoints);
-    }
-    return _result;
-  }
-  factory route_group_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory route_group_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
@@ -2691,8 +2110,10 @@ class route_group_t extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  route_group_t copyWith(void Function(route_group_t) updates) => super.copyWith((message) => updates(message as route_group_t)) as route_group_t; // ignore: deprecated_member_use
+  route_group_t copyWith(void Function(route_group_t) updates) => super.copyWith((message) => updates(message as route_group_t)) as route_group_t;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static route_group_t create() => route_group_t._();
   route_group_t createEmptyInstance() => create();
@@ -2702,15 +2123,21 @@ class route_group_t extends $pb.GeneratedMessage {
   static route_group_t? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get type => $_getSZ(0);
+  $core.String get path => $_getSZ(0);
   @$pb.TagNumber(1)
-  set type($core.String v) { $_setString(0, v); }
+  set path($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasType() => $_has(0);
+  $core.bool hasPath() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => clearField(1);
+  void clearPath() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.List<$core.String> get endpoints => $_getList(1);
+  $core.List<$core.String> get healthyEndpoints => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get unhealthyEndpoints => $_getList(2);
 }
 
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -74,36 +74,17 @@ def output(library_name, enum_pairs_dict):
                 f"""    return {msg_type_name}()..mergeFromBuffer(encodedMsgBody);\n"""
                 f"""  }}"""
             )
-            if msg_type_name == "do_req_t" or msg_type_name == "do_rep_t" \
-                or msg_type_name == "do2_req_t" or msg_type_name == "do2_rep_t" \
-                    or msg_type_name == "ok2_rep_t" or msg_type_name == "error2_rep_t":
-                case_decls2.append(
-                    f"""    {case2} {msg_type_name}: {{\n"""
-                    f"""      return (this as {msg_type_name}).traces[0].ref;\n"""
-                    f"""    }}"""
-                )
-            else:
-                case_decls2.append(
-                    f"""    {case2} {msg_type_name}: {{\n"""
-                    f"""      return (this as {msg_type_name}).ref;\n"""
-                    f"""    }}"""
-                )
-            if msg_type_name == "do_req_t" or msg_type_name == "do_rep_t" \
-                        or msg_type_name == "do2_req_t" or msg_type_name == "do2_rep_t" \
-                        or msg_type_name == "ok2_rep_t" or msg_type_name == "error2_rep_t":
-                case_decls3.append(
-                    f"""    {case2} {msg_type_name}: {{\n"""
-                    f"""      (this as {msg_type_name}).traces[0].ref = ref;\n"""
-                    f"""      break;\n"""
-                    f"""    }}"""
-                )
-            else:
-                case_decls3.append(
-                    f"""    {case2} {msg_type_name}: {{\n"""
-                    f"""      (this as {msg_type_name}).ref = ref;\n"""
-                    f"""      break;\n"""
-                    f"""    }}"""
-                )
+            case_decls2.append(
+                f"""    {case2} {msg_type_name}: {{\n"""
+                f"""      return (this as {msg_type_name}).ref;\n"""
+                f"""    }}"""
+            )
+            case_decls3.append(
+                f"""    {case3} {msg_type_name}: {{\n"""
+                f"""      (this as {msg_type_name}).ref = ref;\n"""
+                f"""      break;\n"""
+                f"""    }}"""
+            )
         case_decls_output0 = "\n".join(case_decls0)
         case_decls_output1 = "\n".join(case_decls1)
         case_decls_output2 = "\n".join(case_decls2)
