@@ -1,5 +1,5 @@
 name: maxwell_protocol
-version: 0.6.5
+version: 0.7.0
 description: The maxwell protocol implementation for dart.
 homepage: https://github.com/maxwell-dev/maxwell-protocol-dart.git
 

@@ -42,6 +42,10 @@ const msg_type_t$json = {
     {'1': 'SET_ROUTES_REP', '2': 72},
     {'1': 'GET_ROUTES_REQ', '2': 75},
     {'1': 'GET_ROUTES_REP', '2': 76},
+    {'1': 'GET_TOPIC_DIST_CHECKSUM_REQ', '2': 77},
+    {'1': 'GET_TOPIC_DIST_CHECKSUM_REP', '2': 78},
+    {'1': 'GET_ROUTE_DIST_CHECKSUM_REQ', '2': 79},
+    {'1': 'GET_ROUTE_DIST_CHECKSUM_REP', '2': 80},
     {'1': 'PICK_FRONTEND_REQ', '2': 81},
     {'1': 'PICK_FRONTEND_REP', '2': 82},
     {'1': 'PICK_FRONTENDS_REQ', '2': 83},
@@ -63,10 +67,12 @@ final $typed_data.Uint8List msg_type_tDescriptor = $convert.base64Decode(
     'JFR0lTVEVSX0JBQ0tFTkRfUkVREEMSGAoUUkVHSVNURVJfQkFDS0VORF9SRVAQRBIYChRSRUdJ'
     'U1RFUl9TRVJWSUNFX1JFURBFEhgKFFJFR0lTVEVSX1NFUlZJQ0VfUkVQEEYSEgoOU0VUX1JPVV'
     'RFU19SRVEQRxISCg5TRVRfUk9VVEVTX1JFUBBIEhIKDkdFVF9ST1VURVNfUkVREEsSEgoOR0VU'
-    'X1JPVVRFU19SRVAQTBIVChFQSUNLX0ZST05URU5EX1JFURBREhUKEVBJQ0tfRlJPTlRFTkRfUk'
-    'VQEFISFgoSUElDS19GUk9OVEVORFNfUkVREFMSFgoSUElDS19GUk9OVEVORFNfUkVQEFQSFAoQ'
-    'TE9DQVRFX1RPUElDX1JFURBVEhQKEExPQ0FURV9UT1BJQ19SRVAQVhISCg5SRVNPTFZFX0lQX1'
-    'JFURB5EhIKDlJFU09MVkVfSVBfUkVQEHo=');
+    'X1JPVVRFU19SRVAQTBIfChtHRVRfVE9QSUNfRElTVF9DSEVDS1NVTV9SRVEQTRIfChtHRVRfVE'
+    '9QSUNfRElTVF9DSEVDS1NVTV9SRVAQThIfChtHRVRfUk9VVEVfRElTVF9DSEVDS1NVTV9SRVEQ'
+    'TxIfChtHRVRfUk9VVEVfRElTVF9DSEVDS1NVTV9SRVAQUBIVChFQSUNLX0ZST05URU5EX1JFUR'
+    'BREhUKEVBJQ0tfRlJPTlRFTkRfUkVQEFISFgoSUElDS19GUk9OVEVORFNfUkVREFMSFgoSUElD'
+    'S19GUk9OVEVORFNfUkVQEFQSFAoQTE9DQVRFX1RPUElDX1JFURBVEhQKEExPQ0FURV9UT1BJQ1'
+    '9SRVAQVhISCg5SRVNPTFZFX0lQX1JFURB5EhIKDlJFU09MVkVfSVBfUkVQEHo=');
 
 @$core.Deprecated('Use error_code_tDescriptor instead')
 const error_code_t$json = {
@@ -77,8 +83,9 @@ const error_code_t$json = {
     {'1': 'NOT_ALLOWED_TO_REGISTER_FRONTEND', '2': 100},
     {'1': 'NOT_ALLOWED_TO_REGISTER_BACKEND', '2': 101},
     {'1': 'NOT_ALLOWED_TO_REGISTER_SERVICE', '2': 102},
-    {'1': 'FAILED_TO_PICK_FRONTEND', '2': 103},
-    {'1': 'FAILED_TO_LOCATE_TOPIC', '2': 104},
+    {'1': 'FAILED_TO_SET_ROUTES', '2': 103},
+    {'1': 'FAILED_TO_PICK_FRONTEND', '2': 104},
+    {'1': 'FAILED_TO_LOCATE_TOPIC', '2': 105},
     {'1': 'MASTER_ERROR', '2': 199},
     {'1': 'FAILED_TO_REQUEST_SERVICE', '2': 200},
     {'1': 'FAILED_TO_REQUEST_BACKEND', '2': 201},
@@ -97,13 +104,13 @@ const error_code_t$json = {
 final $typed_data.Uint8List error_code_tDescriptor = $convert.base64Decode(
     'CgxlcnJvcl9jb2RlX3QSBgoCT0sQABIPCgtVTktOT1dOX01TRxABEiQKIE5PVF9BTExPV0VEX1'
     'RPX1JFR0lTVEVSX0ZST05URU5EEGQSIwofTk9UX0FMTE9XRURfVE9fUkVHSVNURVJfQkFDS0VO'
-    'RBBlEiMKH05PVF9BTExPV0VEX1RPX1JFR0lTVEVSX1NFUlZJQ0UQZhIbChdGQUlMRURfVE9fUE'
-    'lDS19GUk9OVEVORBBnEhoKFkZBSUxFRF9UT19MT0NBVEVfVE9QSUMQaBIRCgxNQVNURVJfRVJS'
-    'T1IQxwESHgoZRkFJTEVEX1RPX1JFUVVFU1RfU0VSVklDRRDIARIeChlGQUlMRURfVE9fUkVRVU'
-    'VTVF9CQUNLRU5EEMkBEhMKDkZST05URU5EX0VSUk9SEKsCEhMKDkZBSUxFRF9UT19QVVNIEKwC'
-    'EhMKDkZBSUxFRF9UT19QVUxMEK0CEhIKDVVOS05PV05fVE9QSUMQrgISEgoNQkFDS0VORF9FUl'
-    'JPUhCPAxIRCgxVTktOT1dOX1BBVEgQkAMSEgoNU0VSVklDRV9FUlJPUhDzAxIRCgxDTElFTlRf'
-    'RVJST1IQ1wQ=');
+    'RBBlEiMKH05PVF9BTExPV0VEX1RPX1JFR0lTVEVSX1NFUlZJQ0UQZhIYChRGQUlMRURfVE9fU0'
+    'VUX1JPVVRFUxBnEhsKF0ZBSUxFRF9UT19QSUNLX0ZST05URU5EEGgSGgoWRkFJTEVEX1RPX0xP'
+    'Q0FURV9UT1BJQxBpEhEKDE1BU1RFUl9FUlJPUhDHARIeChlGQUlMRURfVE9fUkVRVUVTVF9TRV'
+    'JWSUNFEMgBEh4KGUZBSUxFRF9UT19SRVFVRVNUX0JBQ0tFTkQQyQESEwoORlJPTlRFTkRfRVJS'
+    'T1IQqwISEwoORkFJTEVEX1RPX1BVU0gQrAISEwoORkFJTEVEX1RPX1BVTEwQrQISEgoNVU5LTk'
+    '9XTl9UT1BJQxCuAhISCg1CQUNLRU5EX0VSUk9SEI8DEhEKDFVOS05PV05fUEFUSBCQAxISCg1T'
+    'RVJWSUNFX0VSUk9SEPMDEhEKDENMSUVOVF9FUlJPUhDXBA==');
 
 @$core.Deprecated('Use ping_req_tDescriptor instead')
 const ping_req_t$json = {
@@ -449,6 +456,58 @@ const get_routes_rep_t$json = {
 final $typed_data.Uint8List get_routes_rep_tDescriptor = $convert.base64Decode(
     'ChBnZXRfcm91dGVzX3JlcF90EkIKDHJvdXRlX2dyb3VwcxgBIAMoCzIfLm1heHdlbGwucHJvdG'
     '9jb2wucm91dGVfZ3JvdXBfdFILcm91dGVHcm91cHMSEAoDcmVmGA8gASgNUgNyZWY=');
+
+@$core.Deprecated('Use get_topic_dist_checksum_req_tDescriptor instead')
+const get_topic_dist_checksum_req_t$json = {
+  '1': 'get_topic_dist_checksum_req_t',
+  '2': [
+    {'1': 'ref', '3': 15, '4': 1, '5': 13, '10': 'ref'},
+  ],
+};
+
+/// Descriptor for `get_topic_dist_checksum_req_t`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List get_topic_dist_checksum_req_tDescriptor = $convert.base64Decode(
+    'Ch1nZXRfdG9waWNfZGlzdF9jaGVja3N1bV9yZXFfdBIQCgNyZWYYDyABKA1SA3JlZg==');
+
+@$core.Deprecated('Use get_topic_dist_checksum_rep_tDescriptor instead')
+const get_topic_dist_checksum_rep_t$json = {
+  '1': 'get_topic_dist_checksum_rep_t',
+  '2': [
+    {'1': 'checksum', '3': 1, '4': 1, '5': 13, '10': 'checksum'},
+    {'1': 'ref', '3': 15, '4': 1, '5': 13, '10': 'ref'},
+  ],
+};
+
+/// Descriptor for `get_topic_dist_checksum_rep_t`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List get_topic_dist_checksum_rep_tDescriptor = $convert.base64Decode(
+    'Ch1nZXRfdG9waWNfZGlzdF9jaGVja3N1bV9yZXBfdBIaCghjaGVja3N1bRgBIAEoDVIIY2hlY2'
+    'tzdW0SEAoDcmVmGA8gASgNUgNyZWY=');
+
+@$core.Deprecated('Use get_route_dist_checksum_req_tDescriptor instead')
+const get_route_dist_checksum_req_t$json = {
+  '1': 'get_route_dist_checksum_req_t',
+  '2': [
+    {'1': 'ref', '3': 15, '4': 1, '5': 13, '10': 'ref'},
+  ],
+};
+
+/// Descriptor for `get_route_dist_checksum_req_t`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List get_route_dist_checksum_req_tDescriptor = $convert.base64Decode(
+    'Ch1nZXRfcm91dGVfZGlzdF9jaGVja3N1bV9yZXFfdBIQCgNyZWYYDyABKA1SA3JlZg==');
+
+@$core.Deprecated('Use get_route_dist_checksum_rep_tDescriptor instead')
+const get_route_dist_checksum_rep_t$json = {
+  '1': 'get_route_dist_checksum_rep_t',
+  '2': [
+    {'1': 'checksum', '3': 1, '4': 1, '5': 13, '10': 'checksum'},
+    {'1': 'ref', '3': 15, '4': 1, '5': 13, '10': 'ref'},
+  ],
+};
+
+/// Descriptor for `get_route_dist_checksum_rep_t`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List get_route_dist_checksum_rep_tDescriptor = $convert.base64Decode(
+    'Ch1nZXRfcm91dGVfZGlzdF9jaGVja3N1bV9yZXBfdBIaCghjaGVja3N1bRgBIAEoDVIIY2hlY2'
+    'tzdW0SEAoDcmVmGA8gASgNUgNyZWY=');
 
 @$core.Deprecated('Use pick_frontend_req_tDescriptor instead')
 const pick_frontend_req_t$json = {

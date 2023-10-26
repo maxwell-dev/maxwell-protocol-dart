@@ -1368,6 +1368,194 @@ class get_routes_rep_t extends $pb.GeneratedMessage {
   void clearRef() => clearField(15);
 }
 
+class get_topic_dist_checksum_req_t extends $pb.GeneratedMessage {
+  factory get_topic_dist_checksum_req_t() => create();
+  get_topic_dist_checksum_req_t._() : super();
+  factory get_topic_dist_checksum_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory get_topic_dist_checksum_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'get_topic_dist_checksum_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  get_topic_dist_checksum_req_t clone() => get_topic_dist_checksum_req_t()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  get_topic_dist_checksum_req_t copyWith(void Function(get_topic_dist_checksum_req_t) updates) => super.copyWith((message) => updates(message as get_topic_dist_checksum_req_t)) as get_topic_dist_checksum_req_t;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static get_topic_dist_checksum_req_t create() => get_topic_dist_checksum_req_t._();
+  get_topic_dist_checksum_req_t createEmptyInstance() => create();
+  static $pb.PbList<get_topic_dist_checksum_req_t> createRepeated() => $pb.PbList<get_topic_dist_checksum_req_t>();
+  @$core.pragma('dart2js:noInline')
+  static get_topic_dist_checksum_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<get_topic_dist_checksum_req_t>(create);
+  static get_topic_dist_checksum_req_t? _defaultInstance;
+
+  @$pb.TagNumber(15)
+  $core.int get ref => $_getIZ(0);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(0);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
+}
+
+class get_topic_dist_checksum_rep_t extends $pb.GeneratedMessage {
+  factory get_topic_dist_checksum_rep_t() => create();
+  get_topic_dist_checksum_rep_t._() : super();
+  factory get_topic_dist_checksum_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory get_topic_dist_checksum_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'get_topic_dist_checksum_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'checksum', $pb.PbFieldType.OU3)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  get_topic_dist_checksum_rep_t clone() => get_topic_dist_checksum_rep_t()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  get_topic_dist_checksum_rep_t copyWith(void Function(get_topic_dist_checksum_rep_t) updates) => super.copyWith((message) => updates(message as get_topic_dist_checksum_rep_t)) as get_topic_dist_checksum_rep_t;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static get_topic_dist_checksum_rep_t create() => get_topic_dist_checksum_rep_t._();
+  get_topic_dist_checksum_rep_t createEmptyInstance() => create();
+  static $pb.PbList<get_topic_dist_checksum_rep_t> createRepeated() => $pb.PbList<get_topic_dist_checksum_rep_t>();
+  @$core.pragma('dart2js:noInline')
+  static get_topic_dist_checksum_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<get_topic_dist_checksum_rep_t>(create);
+  static get_topic_dist_checksum_rep_t? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get checksum => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set checksum($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChecksum() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChecksum() => clearField(1);
+
+  @$pb.TagNumber(15)
+  $core.int get ref => $_getIZ(1);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(1);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
+}
+
+class get_route_dist_checksum_req_t extends $pb.GeneratedMessage {
+  factory get_route_dist_checksum_req_t() => create();
+  get_route_dist_checksum_req_t._() : super();
+  factory get_route_dist_checksum_req_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory get_route_dist_checksum_req_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'get_route_dist_checksum_req_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  get_route_dist_checksum_req_t clone() => get_route_dist_checksum_req_t()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  get_route_dist_checksum_req_t copyWith(void Function(get_route_dist_checksum_req_t) updates) => super.copyWith((message) => updates(message as get_route_dist_checksum_req_t)) as get_route_dist_checksum_req_t;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static get_route_dist_checksum_req_t create() => get_route_dist_checksum_req_t._();
+  get_route_dist_checksum_req_t createEmptyInstance() => create();
+  static $pb.PbList<get_route_dist_checksum_req_t> createRepeated() => $pb.PbList<get_route_dist_checksum_req_t>();
+  @$core.pragma('dart2js:noInline')
+  static get_route_dist_checksum_req_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<get_route_dist_checksum_req_t>(create);
+  static get_route_dist_checksum_req_t? _defaultInstance;
+
+  @$pb.TagNumber(15)
+  $core.int get ref => $_getIZ(0);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(0);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
+}
+
+class get_route_dist_checksum_rep_t extends $pb.GeneratedMessage {
+  factory get_route_dist_checksum_rep_t() => create();
+  get_route_dist_checksum_rep_t._() : super();
+  factory get_route_dist_checksum_rep_t.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory get_route_dist_checksum_rep_t.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'get_route_dist_checksum_rep_t', package: const $pb.PackageName(_omitMessageNames ? '' : 'maxwell.protocol'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'checksum', $pb.PbFieldType.OU3)
+    ..a<$core.int>(15, _omitFieldNames ? '' : 'ref', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  get_route_dist_checksum_rep_t clone() => get_route_dist_checksum_rep_t()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  get_route_dist_checksum_rep_t copyWith(void Function(get_route_dist_checksum_rep_t) updates) => super.copyWith((message) => updates(message as get_route_dist_checksum_rep_t)) as get_route_dist_checksum_rep_t;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static get_route_dist_checksum_rep_t create() => get_route_dist_checksum_rep_t._();
+  get_route_dist_checksum_rep_t createEmptyInstance() => create();
+  static $pb.PbList<get_route_dist_checksum_rep_t> createRepeated() => $pb.PbList<get_route_dist_checksum_rep_t>();
+  @$core.pragma('dart2js:noInline')
+  static get_route_dist_checksum_rep_t getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<get_route_dist_checksum_rep_t>(create);
+  static get_route_dist_checksum_rep_t? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get checksum => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set checksum($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChecksum() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChecksum() => clearField(1);
+
+  @$pb.TagNumber(15)
+  $core.int get ref => $_getIZ(1);
+  @$pb.TagNumber(15)
+  set ref($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasRef() => $_has(1);
+  @$pb.TagNumber(15)
+  void clearRef() => clearField(15);
+}
+
 class pick_frontend_req_t extends $pb.GeneratedMessage {
   factory pick_frontend_req_t() => create();
   pick_frontend_req_t._() : super();

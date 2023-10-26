@@ -33,6 +33,22 @@ Uint8List encode_msg(GeneratedMessage msg) {
     encodedMsgType[0] = 75;
     break;
   }
+  case get_route_dist_checksum_rep_t: {
+    encodedMsgType[0] = 80;
+    break;
+  }
+  case get_route_dist_checksum_req_t: {
+    encodedMsgType[0] = 79;
+    break;
+  }
+  case get_topic_dist_checksum_rep_t: {
+    encodedMsgType[0] = 78;
+    break;
+  }
+  case get_topic_dist_checksum_req_t: {
+    encodedMsgType[0] = 77;
+    break;
+  }
   case locate_topic_rep_t: {
     encodedMsgType[0] = 86;
     break;
@@ -165,6 +181,18 @@ GeneratedMessage decode_msg(Uint8List encodedMsg) {
   case 75: {
     return get_routes_req_t()..mergeFromBuffer(encodedMsgBody);
   }
+  case 80: {
+    return get_route_dist_checksum_rep_t()..mergeFromBuffer(encodedMsgBody);
+  }
+  case 79: {
+    return get_route_dist_checksum_req_t()..mergeFromBuffer(encodedMsgBody);
+  }
+  case 78: {
+    return get_topic_dist_checksum_rep_t()..mergeFromBuffer(encodedMsgBody);
+  }
+  case 77: {
+    return get_topic_dist_checksum_req_t()..mergeFromBuffer(encodedMsgBody);
+  }
   case 86: {
     return locate_topic_rep_t()..mergeFromBuffer(encodedMsgBody);
   }
@@ -268,6 +296,18 @@ extension ref_aware on GeneratedMessage {
     }
     case get_routes_req_t: {
       return (this as get_routes_req_t).ref;
+    }
+    case get_route_dist_checksum_rep_t: {
+      return (this as get_route_dist_checksum_rep_t).ref;
+    }
+    case get_route_dist_checksum_req_t: {
+      return (this as get_route_dist_checksum_req_t).ref;
+    }
+    case get_topic_dist_checksum_rep_t: {
+      return (this as get_topic_dist_checksum_rep_t).ref;
+    }
+    case get_topic_dist_checksum_req_t: {
+      return (this as get_topic_dist_checksum_req_t).ref;
     }
     case locate_topic_rep_t: {
       return (this as locate_topic_rep_t).ref;
@@ -376,6 +416,22 @@ extension ref_aware on GeneratedMessage {
     }
     case get_routes_req_t: {
       (this as get_routes_req_t).ref = ref;
+      break;
+    }
+    case get_route_dist_checksum_rep_t: {
+      (this as get_route_dist_checksum_rep_t).ref = ref;
+      break;
+    }
+    case get_route_dist_checksum_req_t: {
+      (this as get_route_dist_checksum_req_t).ref = ref;
+      break;
+    }
+    case get_topic_dist_checksum_rep_t: {
+      (this as get_topic_dist_checksum_rep_t).ref = ref;
+      break;
+    }
+    case get_topic_dist_checksum_req_t: {
+      (this as get_topic_dist_checksum_req_t).ref = ref;
       break;
     }
     case locate_topic_rep_t: {

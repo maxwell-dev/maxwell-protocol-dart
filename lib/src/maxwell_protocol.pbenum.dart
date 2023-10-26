@@ -39,6 +39,10 @@ class msg_type_t extends $pb.ProtobufEnum {
   static const msg_type_t SET_ROUTES_REP = msg_type_t._(72, _omitEnumNames ? '' : 'SET_ROUTES_REP');
   static const msg_type_t GET_ROUTES_REQ = msg_type_t._(75, _omitEnumNames ? '' : 'GET_ROUTES_REQ');
   static const msg_type_t GET_ROUTES_REP = msg_type_t._(76, _omitEnumNames ? '' : 'GET_ROUTES_REP');
+  static const msg_type_t GET_TOPIC_DIST_CHECKSUM_REQ = msg_type_t._(77, _omitEnumNames ? '' : 'GET_TOPIC_DIST_CHECKSUM_REQ');
+  static const msg_type_t GET_TOPIC_DIST_CHECKSUM_REP = msg_type_t._(78, _omitEnumNames ? '' : 'GET_TOPIC_DIST_CHECKSUM_REP');
+  static const msg_type_t GET_ROUTE_DIST_CHECKSUM_REQ = msg_type_t._(79, _omitEnumNames ? '' : 'GET_ROUTE_DIST_CHECKSUM_REQ');
+  static const msg_type_t GET_ROUTE_DIST_CHECKSUM_REP = msg_type_t._(80, _omitEnumNames ? '' : 'GET_ROUTE_DIST_CHECKSUM_REP');
   static const msg_type_t PICK_FRONTEND_REQ = msg_type_t._(81, _omitEnumNames ? '' : 'PICK_FRONTEND_REQ');
   static const msg_type_t PICK_FRONTEND_REP = msg_type_t._(82, _omitEnumNames ? '' : 'PICK_FRONTEND_REP');
   static const msg_type_t PICK_FRONTENDS_REQ = msg_type_t._(83, _omitEnumNames ? '' : 'PICK_FRONTENDS_REQ');
@@ -74,6 +78,10 @@ class msg_type_t extends $pb.ProtobufEnum {
     SET_ROUTES_REP,
     GET_ROUTES_REQ,
     GET_ROUTES_REP,
+    GET_TOPIC_DIST_CHECKSUM_REQ,
+    GET_TOPIC_DIST_CHECKSUM_REP,
+    GET_ROUTE_DIST_CHECKSUM_REQ,
+    GET_ROUTE_DIST_CHECKSUM_REP,
     PICK_FRONTEND_REQ,
     PICK_FRONTEND_REP,
     PICK_FRONTENDS_REQ,
@@ -96,8 +104,9 @@ class error_code_t extends $pb.ProtobufEnum {
   static const error_code_t NOT_ALLOWED_TO_REGISTER_FRONTEND = error_code_t._(100, _omitEnumNames ? '' : 'NOT_ALLOWED_TO_REGISTER_FRONTEND');
   static const error_code_t NOT_ALLOWED_TO_REGISTER_BACKEND = error_code_t._(101, _omitEnumNames ? '' : 'NOT_ALLOWED_TO_REGISTER_BACKEND');
   static const error_code_t NOT_ALLOWED_TO_REGISTER_SERVICE = error_code_t._(102, _omitEnumNames ? '' : 'NOT_ALLOWED_TO_REGISTER_SERVICE');
-  static const error_code_t FAILED_TO_PICK_FRONTEND = error_code_t._(103, _omitEnumNames ? '' : 'FAILED_TO_PICK_FRONTEND');
-  static const error_code_t FAILED_TO_LOCATE_TOPIC = error_code_t._(104, _omitEnumNames ? '' : 'FAILED_TO_LOCATE_TOPIC');
+  static const error_code_t FAILED_TO_SET_ROUTES = error_code_t._(103, _omitEnumNames ? '' : 'FAILED_TO_SET_ROUTES');
+  static const error_code_t FAILED_TO_PICK_FRONTEND = error_code_t._(104, _omitEnumNames ? '' : 'FAILED_TO_PICK_FRONTEND');
+  static const error_code_t FAILED_TO_LOCATE_TOPIC = error_code_t._(105, _omitEnumNames ? '' : 'FAILED_TO_LOCATE_TOPIC');
   static const error_code_t MASTER_ERROR = error_code_t._(199, _omitEnumNames ? '' : 'MASTER_ERROR');
   static const error_code_t FAILED_TO_REQUEST_SERVICE = error_code_t._(200, _omitEnumNames ? '' : 'FAILED_TO_REQUEST_SERVICE');
   static const error_code_t FAILED_TO_REQUEST_BACKEND = error_code_t._(201, _omitEnumNames ? '' : 'FAILED_TO_REQUEST_BACKEND');
@@ -116,6 +125,7 @@ class error_code_t extends $pb.ProtobufEnum {
     NOT_ALLOWED_TO_REGISTER_FRONTEND,
     NOT_ALLOWED_TO_REGISTER_BACKEND,
     NOT_ALLOWED_TO_REGISTER_SERVICE,
+    FAILED_TO_SET_ROUTES,
     FAILED_TO_PICK_FRONTEND,
     FAILED_TO_LOCATE_TOPIC,
     MASTER_ERROR,
