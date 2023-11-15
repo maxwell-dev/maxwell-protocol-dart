@@ -1,6 +1,6 @@
 prj-dir := $(shell pwd)
 lib-dir := $(prj-dir)/lib
-dart := /usr/local/bin/dart
+dart := dart
 
 build: install-deps gen
 
@@ -12,6 +12,9 @@ gen:
 
 test: build
 	$(pub) run test --coverage=coverage
+
+publish:
+	$(dart) pub publish
 
 clean:
 	$(prj-dir)/bin/clean_protocol_code.sh
